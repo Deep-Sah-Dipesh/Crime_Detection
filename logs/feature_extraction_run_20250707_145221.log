@@ -1,0 +1,82 @@
+2025-07-07 14:52:21 - FeatureExtractionRunner - INFO - ================================================================================
+2025-07-07 14:52:21 - FeatureExtractionRunner - INFO - STARTING ALL FEATURE EXTRACTION PIPELINES
+2025-07-07 14:52:21 - FeatureExtractionRunner - INFO - Log file: g:\Crime_Detection\logs\feature_extraction_run_20250707_145221.log
+2025-07-07 14:52:21 - FeatureExtractionRunner - INFO - Feature output base directories: {'audio': 'g:\\Crime_Detection\\Training\\Processed_Data\\audio_features', 'video': 'g:\\Crime_Detection\\Training\\Processed_Data\\video_features', 'text': 'g:\\Crime_Detection\\Training\\Processed_Data\\text_features'}
+2025-07-07 14:52:21 - FeatureExtractionRunner - INFO - ================================================================================
+2025-07-07 14:52:21 - FeatureExtractionRunner - INFO - Initializing RobustTextFeatureExtractor...
+2025-07-07 14:52:23 - FeatureExtractionRunner - INFO - RobustTextFeatureExtractor initialized.
+2025-07-07 14:52:23 - FeatureExtractionRunner - INFO - Initializing AudioFeatureExtractor...
+2025-07-07 14:52:26 - FeatureExtractionRunner - INFO - AudioFeatureExtractor initialized.
+2025-07-07 14:52:26 - FeatureExtractionRunner - INFO - Initializing VideoFeatureExtractor...
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - VideoFeatureExtractor initialized.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 
+Scanning for raw video files to process...
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - Found 3950 video files in g:\Crime_Detection\Training\Videos
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 
+Starting feature extraction for all files...
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1-1004\Brick.Mansions.2014__#00-17-12_00-17-40_label_B2-0-0.mp4 - All features now present.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1-1004\Deadpool.2.2018__#0-59-16_0-59-23_label_G-0-0.mp4 - All features now present.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1-1004\Fast.Five.2011__#00-00-50_00-01-20_label_A.mp4 - All features now present.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1-1004\Fast.Five.2011__#01-34-41_01-35-12_label_B2-0-0.mp4 - All features now present.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1-1004\Fast.Furious.6.2013__#01-47-00_01-47-38_label_B6-0-0.mp4 - All features now present.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1-1004\Fury.2014__#00-01-50_00-02-58_label_A.mp4 - All features now present.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1-1004\GoldenEye.1995__#00-35-26_00-35-44_label_B2-0-0.mp4 - All features now present.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1-1004\GoldenEye.1995__#01-28-03_01-28-24_label_G-0-0.mp4 - All features now present.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1-1004\Haywire.2011__#00-51-18_00-51-53_label_B1-0-0.mp4 - All features now present.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1-1004\Kill.Bill.Vol.1.2003__#01-05-33_01-06-42_label_A.mp4 - All features now present.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1-1004\Mindhunters.2004__#01-26-00_01-26-50_label_B1-0-0.mp4 - All features now present.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1-1004\Mindhunters.2004__#01-36-00_01-37-00_label_B2-0-0.mp4 - All features now present.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1-1004\Mission.Impossible.Fallout.2018__#02-12-31_02-12-38_label_G-0-0.mp4 - All features now present.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1-1004\Mission.Impossible.Ghost.Protocol.2011__#01-20-40_01-21-10_label_B6-0-0.mp4 - All features now present.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1-1004\Mission.Impossible.II.2000__#01-33-57_01-34-19_label_G-B2-0.mp4 - All features now present.
+2025-07-07 14:52:27 - FeatureExtractionRunner - INFO - 1005-2004\Operation.Red.Sea.2018__#01-34-55_01-35-22_label_G-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\Salt.2010__#01-17-50_01-18-14_label_B1-B2-B5.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\Skyfall.2012__#00-07-50_00-08-21_label_B2-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\Skyfall.2012__#01-03-44_01-04-25_label_B1-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\Skyfall.2012__#01-38-10_01-38-43_label_B6-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\Skyfall.2012__#02-04-00_02-05-10_label_G-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\Skyfall.2012__#02-08-20_02-08-43_label_B2-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\Spectre.2015__#02-02-16_02-02-33_label_B2-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\Taken.2.UNRATED.EXTENDED.2012__#01-17-00_01-17-30_label_B1-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\Taken.3.2014__#00-49-02_00-49-27_label_G-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\Taken.3.2014__#01-08-40_01-09-10_label_B6-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\Taken.Extended.Cut.2008__#00-49-20_00-49-55_label_B2-B6-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\The.Bourne.Legacy.2012__#0-38-41_0-38-51_label_B2-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\The.Bourne.Supremacy.2004__#0-31-09_0-31-29_label_B1-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\The.World.Is.Not.Enough.1999__#00-36-10_00-36-27_label_G-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\The.World.Is.Not.Enough.1999__#00-37-10_00-37-57_label_G-B2-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\The.World.Is.Not.Enough.1999__#00-56-40_00-56-51_label_G-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\v=0nNh2MZ_5bY__#1_label_A.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\v=5plpAWiJ9VA__#1_label_B4-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\v=5Rh7DIBWKBk__#00-07-03_00-07-20_label_B6-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\v=6IiAgbi5t_Q__#1_label_B1-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\v=7PXpgxmogSc__#1_label_B4-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\v=7Qw-QPZZrAk__#1_label_G-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 1005-2004\v=8teJmzR7Z18__#1_label_A.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 2005-2804\v=87ss-JRZIs4__#1_label_G-0-0.mp4 - All features now present.
+2025-07-07 14:52:28 - FeatureExtractionRunner - INFO - 2005-2804\v=93p7OOw7Rug__#1_label_G-0-0.mp4 - All features now present.
+2025-07-07 14:52:29 - FeatureExtractionRunner - INFO - 2005-2804\v=ekH2zovSEIE__#1_label_B1-0-0.mp4 - All features now present.
+2025-07-07 14:52:29 - FeatureExtractionRunner - INFO - 2005-2804\v=FOVMrynP_og__#1_label_A.mp4 - All features now present.
+2025-07-07 14:52:30 - FeatureExtractionRunner - INFO - 2005-2804\v=Gm73TwtUyGY__#1_label_G-0-0.mp4 - All features now present.
+2025-07-07 14:52:30 - FeatureExtractionRunner - INFO - 2005-2804\v=gqscrsa8aRU__#1_label_A.mp4 - All features now present.
+2025-07-07 14:52:31 - FeatureExtractionRunner - INFO - 2005-2804\v=HkxSLJKE2cY__#1_label_B4-0-0.mp4 - All features now present.
+2025-07-07 14:52:31 - FeatureExtractionRunner - INFO - 2005-2804\v=hwgsrGRXxAo__#1_label_A.mp4 - All features now present.
+2025-07-07 14:52:31 - FeatureExtractionRunner - INFO - 2805-3319\v=LMK1VKvqIcU__#1_label_A.mp4 - All features now present.
+2025-07-07 14:52:31 - FeatureExtractionRunner - INFO - 2805-3319\v=ra2N2BasBLY__#1_label_G-0-0.mp4 - All features now present.
+2025-07-07 14:52:31 - FeatureExtractionRunner - INFO - 3320-3954\v=Su_wcUpLYIk__#1_label_A.mp4 - All features now present.
+2025-07-07 14:52:31 - FeatureExtractionRunner - INFO - 3320-3954\v=vAucGlR_2iU__#1_label_B1-0-0.mp4 - All features now present.
+2025-07-07 14:52:31 - FeatureExtractionRunner - INFO - 3320-3954\v=vC1BpmubbW4__#1_label_B4-0-0.mp4 - All features now present.
+2025-07-07 14:52:32 - FeatureExtractionRunner - INFO - 3320-3954\v=wPkBaI6vOv0__#00-08-53_00-09-44_label_G-0-0.mp4 - All features now present.
+2025-07-07 14:52:32 - FeatureExtractionRunner - INFO - 3320-3954\v=xj64iI5W6r8__#1_label_A.mp4 - All features now present.
+2025-07-07 14:52:32 - FeatureExtractionRunner - INFO - 3320-3954\v=Zh3eVBs-5Tc__#1_label_A.mp4 - All features now present.
+2025-07-07 14:52:33 - FeatureExtractionRunner - INFO - 3320-3954\Yellow.Sea.2010__#02-11-06_02-12-19_label_A.mp4 - All features now present.
+2025-07-07 14:52:33 - FeatureExtractionRunner - INFO - 3320-3954\Young.And.Dangerous.I.1996__#0-10-45_0-11-25_label_B1-0-0.mp4 - All features now present.
+2025-07-07 14:52:33 - FeatureExtractionRunner - INFO - 
+================================================================================
+2025-07-07 14:52:33 - FeatureExtractionRunner - INFO - ALL FEATURE EXTRACTION PIPELINES COMPLETED
+2025-07-07 14:52:33 - FeatureExtractionRunner - INFO - Total raw video files scanned: 3950
+2025-07-07 14:52:33 - FeatureExtractionRunner - INFO - Successfully processed (all features now present): 57
+2025-07-07 14:52:33 - FeatureExtractionRunner - INFO - Skipped (all features already existed at start): 3893
+2025-07-07 14:52:33 - FeatureExtractionRunner - INFO - Re-extracted (at least one missing feature was successfully extracted): 57
+2025-07-07 14:52:33 - FeatureExtractionRunner - INFO - Failed (at least one feature could not be extracted or raw file missing): 0
+2025-07-07 14:52:33 - FeatureExtractionRunner - INFO - ================================================================================

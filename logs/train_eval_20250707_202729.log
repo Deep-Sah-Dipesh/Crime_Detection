@@ -1,0 +1,91 @@
+2025-07-07 20:27:29 - main_train_eval - INFO - Starting training/evaluation script.
+2025-07-07 20:27:29 - main_train_eval - INFO - Using device: cuda
+2025-07-07 20:27:29 - main_train_eval - INFO - Random seed set to 42 for reproducibility.
+2025-07-07 20:27:29 - main_train_eval - INFO - Loading existing data splits from g:\Crime_Detection\data_splits\data_splits.json
+2025-07-07 20:27:29 - main_train_eval - INFO - Loaded splits: Train=2764, Val=593, Test=593
+2025-07-07 20:27:29 - main_train_eval - INFO - Initializing datasets...
+2025-07-07 20:27:30 - main_train_eval - INFO - Using 8 workers for DataLoaders.
+2025-07-07 20:27:30 - main_train_eval - INFO - Actual Train samples: 2764, Val samples: 593, Test samples: 593
+2025-07-07 20:27:30 - main_train_eval - INFO - Train batches: 173, Val batches: 38, Test batches: 38
+2025-07-07 20:27:31 - main_train_eval - INFO - Model architecture:
+MultimodalCrimeDetector(
+  (text_embedder): Sequential(
+    (0): Linear(in_features=768, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.3, inplace=False)
+  )
+  (video_embedder): Sequential(
+    (0): Linear(in_features=512, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.3, inplace=False)
+  )
+  (audio_embedder): Sequential(
+    (0): Linear(in_features=1024, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.3, inplace=False)
+  )
+  (fusion_layer): Sequential(
+    (0): Linear(in_features=768, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.3, inplace=False)
+  )
+  (classifier): Linear(in_features=512, out_features=2, bias=True)
+)
+2025-07-07 20:27:31 - main_train_eval - INFO - Optimizer: Adam, LR: 0.0001, Weight Decay: 1e-05
+2025-07-07 20:27:31 - main_train_eval - INFO - Loss function: CrossEntropyLoss
+2025-07-07 20:27:31 - main_train_eval - INFO - Checkpoint loaded from g:\Crime_Detection\checkpoints\best_model.pth (Epoch: 18, Loss: 0.1365)
+2025-07-07 20:27:31 - main_train_eval - INFO - Resuming training from epoch 19 with previous best validation loss 0.1365
+2025-07-07 20:27:31 - main_train_eval - INFO - Starting training loop...
+2025-07-07 20:28:31 - main_train_eval - INFO - Epoch 19 Training Summary: Avg Loss: 0.0673, Accuracy: 97.43%
+2025-07-07 20:28:56 - main_train_eval - INFO - Epoch 19 Validation Results: Loss: 0.1438, Accuracy: 94.27%, Precision: 0.9659, Recall: 0.9218, F1: 0.9433, AUC-ROC: 0.9883
+2025-07-07 20:28:56 - main_train_eval - INFO - Epoch 19 finished in 84.81 seconds.
+2025-07-07 20:28:56 - main_train_eval - INFO - Early stopping patience: 1/10
+2025-07-07 20:29:21 - main_train_eval - INFO - Epoch 20 Training Summary: Avg Loss: 0.0580, Accuracy: 98.08%
+2025-07-07 20:29:46 - main_train_eval - INFO - Epoch 20 Validation Results: Loss: 0.1516, Accuracy: 94.27%, Precision: 0.9691, Recall: 0.9186, F1: 0.9431, AUC-ROC: 0.9889
+2025-07-07 20:29:46 - main_train_eval - INFO - Epoch 20 finished in 50.06 seconds.
+2025-07-07 20:29:46 - main_train_eval - INFO - Early stopping patience: 2/10
+2025-07-07 20:30:12 - main_train_eval - INFO - Epoch 21 Training Summary: Avg Loss: 0.0617, Accuracy: 97.94%
+2025-07-07 20:30:37 - main_train_eval - INFO - Epoch 21 Validation Results: Loss: 0.1736, Accuracy: 93.42%, Precision: 0.9621, Recall: 0.9088, F1: 0.9347, AUC-ROC: 0.9851
+2025-07-07 20:30:37 - main_train_eval - INFO - Epoch 21 finished in 50.58 seconds.
+2025-07-07 20:30:37 - main_train_eval - INFO - Early stopping patience: 3/10
+2025-07-07 20:31:02 - main_train_eval - INFO - Epoch 22 Training Summary: Avg Loss: 0.0498, Accuracy: 98.30%
+2025-07-07 20:31:26 - main_train_eval - INFO - Epoch 22 Validation Results: Loss: 0.1750, Accuracy: 93.09%, Precision: 0.9750, Recall: 0.8893, F1: 0.9302, AUC-ROC: 0.9882
+2025-07-07 20:31:26 - main_train_eval - INFO - Epoch 22 finished in 49.33 seconds.
+2025-07-07 20:31:26 - main_train_eval - INFO - Early stopping patience: 4/10
+2025-07-07 20:31:51 - main_train_eval - INFO - Epoch 23 Training Summary: Avg Loss: 0.0466, Accuracy: 98.55%
+2025-07-07 20:32:15 - main_train_eval - INFO - Epoch 23 Validation Results: Loss: 0.1433, Accuracy: 94.77%, Precision: 0.9631, Recall: 0.9349, F1: 0.9488, AUC-ROC: 0.9877
+2025-07-07 20:32:15 - main_train_eval - INFO - Epoch 23 finished in 48.88 seconds.
+2025-07-07 20:32:15 - main_train_eval - INFO - Early stopping patience: 5/10
+2025-07-07 20:32:39 - main_train_eval - INFO - Epoch 24 Training Summary: Avg Loss: 0.0406, Accuracy: 98.63%
+2025-07-07 20:33:02 - main_train_eval - INFO - Epoch 24 Validation Results: Loss: 0.1508, Accuracy: 94.44%, Precision: 0.9391, Recall: 0.9544, F1: 0.9467, AUC-ROC: 0.9882
+2025-07-07 20:33:02 - main_train_eval - INFO - Epoch 24 finished in 47.14 seconds.
+2025-07-07 20:33:02 - main_train_eval - INFO - Early stopping patience: 6/10
+2025-07-07 20:33:26 - main_train_eval - INFO - Epoch 25 Training Summary: Avg Loss: 0.0454, Accuracy: 98.26%
+2025-07-07 20:33:50 - main_train_eval - INFO - Epoch 25 Validation Results: Loss: 0.1738, Accuracy: 93.76%, Precision: 0.9688, Recall: 0.9088, F1: 0.9378, AUC-ROC: 0.9876
+2025-07-07 20:33:50 - main_train_eval - INFO - Epoch 25 finished in 47.75 seconds.
+2025-07-07 20:33:50 - main_train_eval - INFO - Early stopping patience: 7/10
+2025-07-07 20:34:14 - main_train_eval - INFO - Epoch 26 Training Summary: Avg Loss: 0.0426, Accuracy: 98.70%
+2025-07-07 20:34:37 - main_train_eval - INFO - Epoch 26 Validation Results: Loss: 0.1767, Accuracy: 94.44%, Precision: 0.9824, Recall: 0.9088, F1: 0.9442, AUC-ROC: 0.9886
+2025-07-07 20:34:37 - main_train_eval - INFO - Epoch 26 finished in 47.01 seconds.
+2025-07-07 20:34:37 - main_train_eval - INFO - Early stopping patience: 8/10
+2025-07-07 20:35:00 - main_train_eval - INFO - Epoch 27 Training Summary: Avg Loss: 0.0374, Accuracy: 98.70%
+2025-07-07 20:35:23 - main_train_eval - INFO - Epoch 27 Validation Results: Loss: 0.1608, Accuracy: 94.44%, Precision: 0.9628, Recall: 0.9283, F1: 0.9453, AUC-ROC: 0.9875
+2025-07-07 20:35:23 - main_train_eval - INFO - Epoch 27 finished in 45.84 seconds.
+2025-07-07 20:35:23 - main_train_eval - INFO - Early stopping patience: 9/10
+2025-07-07 20:35:47 - main_train_eval - INFO - Epoch 28 Training Summary: Avg Loss: 0.0315, Accuracy: 98.88%
+2025-07-07 20:36:10 - main_train_eval - INFO - Epoch 28 Validation Results: Loss: 0.1521, Accuracy: 94.94%, Precision: 0.9511, Recall: 0.9511, F1: 0.9511, AUC-ROC: 0.9882
+2025-07-07 20:36:10 - main_train_eval - INFO - Epoch 28 finished in 47.03 seconds.
+2025-07-07 20:36:10 - main_train_eval - INFO - Early stopping patience: 10/10
+2025-07-07 20:36:10 - main_train_eval - INFO - Early stopping triggered at epoch 28. No improvement in validation loss for 10 epochs.
+2025-07-07 20:36:10 - main_train_eval - INFO - Training complete.
+2025-07-07 20:36:10 - main_train_eval - INFO - Loading best model for final test set evaluation...
+2025-07-07 20:36:10 - main_train_eval - INFO - Checkpoint loaded from g:\Crime_Detection\checkpoints\best_model.pth (Epoch: 18, Loss: 0.1365)
+2025-07-07 20:36:34 - main_train_eval - INFO - Final Test Results: Loss: 0.1592, Accuracy: 95.28%, Precision: 0.9515, Recall: 0.9577, F1: 0.9545, AUC-ROC: 0.9852
+2025-07-07 20:36:34 - main_train_eval - INFO - Final Test Set Metrics:
+2025-07-07 20:36:34 - main_train_eval - INFO -   Loss: 0.1592
+2025-07-07 20:36:34 - main_train_eval - INFO -   Accuracy: 95.28%
+2025-07-07 20:36:34 - main_train_eval - INFO -   Precision: 0.9515
+2025-07-07 20:36:34 - main_train_eval - INFO -   Recall: 0.9577
+2025-07-07 20:36:34 - main_train_eval - INFO -   F1-Score: 0.9545
+2025-07-07 20:36:34 - main_train_eval - INFO -   AUC-ROC: 0.9852
+2025-07-07 20:36:34 - main_train_eval - INFO - Script finished.

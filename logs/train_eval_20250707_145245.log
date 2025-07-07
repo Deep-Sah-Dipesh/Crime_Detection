@@ -1,0 +1,38 @@
+2025-07-07 14:52:45 - main_train_eval - INFO - Starting training/evaluation script.
+2025-07-07 14:52:45 - main_train_eval - INFO - Using device: cuda
+2025-07-07 14:52:45 - main_train_eval - INFO - Random seed set to 42 for reproducibility.
+2025-07-07 14:52:45 - main_train_eval - INFO - Creating new data splits...
+2025-07-07 14:52:45 - main_train_eval - INFO - Found 3950 clips with labels for splitting.
+2025-07-07 14:52:45 - main_train_eval - INFO - Label distribution for splitting: {0: 1904, 1: 2046}
+2025-07-07 14:52:45 - main_train_eval - INFO - Data splits saved to g:\Crime_Detection\data_splits\data_splits.json
+2025-07-07 14:52:45 - main_train_eval - INFO - Train clips: 2764, Val clips: 593, Test clips: 593
+2025-07-07 14:52:45 - main_train_eval - INFO - Initializing datasets...
+2025-07-07 14:52:46 - main_train_eval - INFO - Using 8 workers for DataLoaders.
+2025-07-07 14:52:46 - main_train_eval - INFO - Actual Train samples: 2764, Val samples: 593, Test samples: 593
+2025-07-07 14:52:46 - main_train_eval - INFO - Train batches: 173, Val batches: 38, Test batches: 38
+2025-07-07 14:52:47 - main_train_eval - INFO - Model architecture:
+MultimodalCrimeDetector(
+  (text_embedder): Sequential(
+    (0): Linear(in_features=768, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.3, inplace=False)
+  )
+  (video_embedder): Sequential(
+    (0): Linear(in_features=512, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.3, inplace=False)
+  )
+  (audio_embedder): Sequential(
+    (0): Linear(in_features=1024, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.3, inplace=False)
+  )
+  (fusion_layer): Sequential(
+    (0): Linear(in_features=768, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.3, inplace=False)
+  )
+  (classifier): Linear(in_features=512, out_features=2, bias=True)
+)
+2025-07-07 14:52:47 - main_train_eval - INFO - Optimizer: Adam, LR: 0.0001, Weight Decay: 1e-05
+2025-07-07 14:52:47 - main_train_eval - INFO - Loss function: CrossEntropyLoss

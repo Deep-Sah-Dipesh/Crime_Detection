@@ -1,0 +1,9 @@
+2025-07-07 17:35:33 - main_train_eval - INFO - Starting training/evaluation script.
+2025-07-07 17:35:33 - main_train_eval - INFO - Using device: cuda
+2025-07-07 17:35:33 - main_train_eval - INFO - Random seed set to 42 for reproducibility.
+2025-07-07 17:35:33 - main_train_eval - INFO - Loading existing data splits from g:\Crime_Detection\data_splits\data_splits.json
+2025-07-07 17:35:33 - main_train_eval - INFO - Loaded splits: Train=2764, Val=593, Test=593
+2025-07-07 17:35:33 - main_train_eval - INFO - Initializing datasets...
+2025-07-07 17:35:33 - main_train_eval - INFO - Using 8 workers for DataLoaders.
+2025-07-07 17:35:34 - main_train_eval - INFO - Actual Train samples: 2764, Val samples: 593, Test samples: 593
+2025-07-07 17:35:34 - main_train_eval - INFO - Train batches: 173, Val batches: 38, Test batches: 38

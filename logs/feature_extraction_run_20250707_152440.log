@@ -1,0 +1,25 @@
+2025-07-07 15:24:40 - FeatureExtractionRunner - INFO - ================================================================================
+2025-07-07 15:24:40 - FeatureExtractionRunner - INFO - STARTING ALL FEATURE EXTRACTION PIPELINES
+2025-07-07 15:24:40 - FeatureExtractionRunner - INFO - Log file: g:\Crime_Detection\logs\feature_extraction_run_20250707_152440.log
+2025-07-07 15:24:40 - FeatureExtractionRunner - INFO - Feature output base directories: {'audio': 'g:\\Crime_Detection\\Training\\Processed_Data\\audio_features', 'video': 'g:\\Crime_Detection\\Training\\Processed_Data\\video_features', 'text': 'g:\\Crime_Detection\\Training\\Processed_Data\\text_features'}
+2025-07-07 15:24:40 - FeatureExtractionRunner - INFO - ================================================================================
+2025-07-07 15:24:40 - FeatureExtractionRunner - INFO - Initializing RobustTextFeatureExtractor...
+2025-07-07 15:24:43 - FeatureExtractionRunner - INFO - RobustTextFeatureExtractor initialized.
+2025-07-07 15:24:43 - FeatureExtractionRunner - INFO - Initializing AudioFeatureExtractor...
+2025-07-07 15:24:46 - FeatureExtractionRunner - INFO - AudioFeatureExtractor initialized.
+2025-07-07 15:24:46 - FeatureExtractionRunner - INFO - Initializing VideoFeatureExtractor...
+2025-07-07 15:24:46 - FeatureExtractionRunner - INFO - VideoFeatureExtractor initialized.
+2025-07-07 15:24:46 - FeatureExtractionRunner - INFO - 
+Scanning for raw video files to process...
+2025-07-07 15:24:46 - FeatureExtractionRunner - INFO - Found 3950 video files in g:\Crime_Detection\Training\Videos
+2025-07-07 15:24:46 - FeatureExtractionRunner - INFO - 
+Starting feature extraction for all files...
+2025-07-07 15:24:47 - FeatureExtractionRunner - INFO - 
+================================================================================
+2025-07-07 15:24:47 - FeatureExtractionRunner - INFO - ALL FEATURE EXTRACTION PIPELINES COMPLETED
+2025-07-07 15:24:47 - FeatureExtractionRunner - INFO - Total raw video files scanned: 3950
+2025-07-07 15:24:47 - FeatureExtractionRunner - INFO - Successfully processed (all features now present): 0
+2025-07-07 15:24:47 - FeatureExtractionRunner - INFO - Skipped (all features already existed at start): 3950
+2025-07-07 15:24:47 - FeatureExtractionRunner - INFO - Re-extracted (at least one missing feature was successfully extracted): 0
+2025-07-07 15:24:47 - FeatureExtractionRunner - INFO - Failed (at least one feature could not be extracted or raw file missing): 0
+2025-07-07 15:24:47 - FeatureExtractionRunner - INFO - ================================================================================

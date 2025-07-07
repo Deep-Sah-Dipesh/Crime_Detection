@@ -1,0 +1,9 @@
+2025-07-07 00:49:30,638 - main - INFO - Starting training/evaluation script.
+2025-07-07 00:49:30,639 - main - INFO - Using device: cuda
+2025-07-07 00:49:30,640 - main - INFO - Starting missing feature repair process...
+2025-07-07 00:49:30,663 - main - INFO - Found 3950 video clips to check for features.
+2025-07-07 00:49:31,732 - main - INFO - Feature repair process completed.
+2025-07-07 00:49:31,733 - main - INFO - Total features found missing: 0
+2025-07-07 00:49:31,734 - main - INFO - Total features re-extracted: 0
+2025-07-07 00:49:31,734 - main - INFO - Scanning video directory for all clips: g:\Crime_Detection\Training\Videos
+2025-07-07 00:49:31,756 - main - INFO - Found 3950 total video clips.

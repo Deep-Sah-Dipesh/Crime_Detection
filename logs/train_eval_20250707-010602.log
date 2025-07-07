@@ -1,0 +1,19 @@
+2025-07-07 01:06:02,526 - main - INFO - Starting training/evaluation script.
+2025-07-07 01:06:02,526 - main - INFO - Using device: cuda
+2025-07-07 01:06:02,526 - main - INFO - Starting missing feature repair process...
+2025-07-07 01:06:02,541 - main - INFO - Found 3950 video clips to check for features.
+2025-07-07 01:06:03,358 - main - INFO - Feature repair process completed.
+2025-07-07 01:06:03,358 - main - INFO - Missing Features Summary:
+2025-07-07 01:06:03,358 - main - INFO -   Audio: 0 missing
+2025-07-07 01:06:03,358 - main - INFO -   Video: 0 missing
+2025-07-07 01:06:03,359 - main - INFO -   Text: 0 missing
+2025-07-07 01:06:03,359 - main - INFO - Repaired Features Summary:
+2025-07-07 01:06:03,359 - main - INFO -   Audio: 0 repaired
+2025-07-07 01:06:03,359 - main - INFO -   Video: 0 repaired
+2025-07-07 01:06:03,359 - main - INFO -   Text: 0 repaired
+2025-07-07 01:06:03,360 - main - INFO - Scanning video directory for all clips: g:\Crime_Detection\Training\Videos
+2025-07-07 01:06:03,378 - main - INFO - Found 3950 total video clips.
+2025-07-07 01:06:03,378 - main - INFO - Loading data items for Training split from 3950 raw video paths...
+2025-07-07 01:06:04,186 - main - INFO - Initialized Training dataset with 3950 samples.
+2025-07-07 01:06:04,186 - main - INFO - Actual Train samples: 2765, Val samples: 592, Test samples: 593
+2025-07-07 01:06:04,186 - main - INFO - Train batches: 173, Val batches: 37, Test batches: 38

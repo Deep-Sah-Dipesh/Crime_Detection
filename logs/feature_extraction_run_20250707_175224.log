@@ -1,0 +1,27 @@
+2025-07-07 17:52:24,335 - FeatureExtractionRunner - INFO - ================================================================================
+2025-07-07 17:52:24,335 - FeatureExtractionRunner - INFO - STARTING ALL FEATURE EXTRACTION PIPELINES
+2025-07-07 17:52:24,335 - FeatureExtractionRunner - INFO - Log file: g:\Crime_Detection\logs\feature_extraction_run_20250707_175224.log
+2025-07-07 17:52:24,335 - FeatureExtractionRunner - INFO - Feature output base directories: {'audio': 'g:\\Crime_Detection\\Training\\Processed_Data\\audio_features', 'video': 'g:\\Crime_Detection\\Training\\Processed_Data\\video_features', 'text': 'g:\\Crime_Detection\\Training\\Processed_Data\\text_features'}
+2025-07-07 17:52:24,335 - FeatureExtractionRunner - INFO - ================================================================================
+2025-07-07 17:52:24,335 - FeatureExtractionRunner - INFO - Initializing RobustTextFeatureExtractor...
+2025-07-07 17:52:26,723 - FeatureExtractionRunner - INFO - RobustTextFeatureExtractor initialized.
+2025-07-07 17:52:26,723 - FeatureExtractionRunner - INFO - Initializing AudioFeatureExtractor...
+2025-07-07 17:52:26,723 - AudioExtractor - INFO - Attempting loading strategy 1...
+2025-07-07 17:52:26,723 - absl - INFO - Using g:\Crime_Detection\Training\Processed_Data\tfhub_cache to cache modules.
+2025-07-07 17:52:26,781 - tensorflow - WARNING - From c:\Users\admin\anaconda3\envs\new_crime_env2\lib\site-packages\tensorflow_hub\resolver.py:120: The name tf.gfile.MakeDirs is deprecated. Please use tf.io.gfile.makedirs instead.
+
+2025-07-07 17:52:26,785 - tensorflow - WARNING - From c:\Users\admin\anaconda3\envs\new_crime_env2\lib\site-packages\tensorflow_hub\module_v2.py:126: The name tf.saved_model.load_v2 is deprecated. Please use tf.compat.v2.saved_model.load instead.
+
+2025-07-07 17:52:29,551 - absl - INFO - Fingerprint not found. Saved model loading will continue.
+2025-07-07 17:52:29,551 - absl - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-07-07 17:52:29,567 - FeatureExtractionRunner - INFO - AudioFeatureExtractor initialized.
+2025-07-07 17:52:29,567 - FeatureExtractionRunner - INFO - Initializing VideoFeatureExtractor...
+2025-07-07 17:52:30,055 - VideoExtractor - INFO - Video Feature Extractor initialized with frame_rate=1, sequence_length=16, device=cuda
+2025-07-07 17:52:30,055 - FeatureExtractionRunner - INFO - VideoFeatureExtractor initialized.
+2025-07-07 17:52:30,055 - FeatureExtractionRunner - INFO - 
+Scanning for raw video files to process...
+2025-07-07 17:52:30,087 - FeatureExtractionRunner - INFO - Found 3950 video files in g:\Crime_Detection\Training\Videos
+2025-07-07 17:52:30,087 - FeatureExtractionRunner - INFO - 
+Starting feature extraction for all files...
+2025-07-07 17:52:30,102 - FeatureExtractionRunner - INFO - Extracting features for 1-1004/A.Beautiful.Mind.2001__#00-01-45_00-02-50_label_A.mp4...
+2025-07-07 17:52:30,102 - FeatureExtractionRunner - INFO -   Extracting video features for A.Beautiful.Mind.2001__#00-01-45_00-02-50_label_A.mp4...

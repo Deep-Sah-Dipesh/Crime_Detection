@@ -1,0 +1,130 @@
+2025-07-07 00:28:21,189 - main - INFO - Starting training/evaluation script.
+2025-07-07 00:28:21,189 - main - INFO - Using device: cuda
+2025-07-07 00:28:21,240 - main - INFO - Scanning video directory for all clips: g:\Crime_Detection\Training\Videos
+2025-07-07 00:28:21,347 - main - INFO - Found 3950 total video clips.
+2025-07-07 00:28:21,381 - main - INFO - Total clips: 3950
+2025-07-07 00:28:21,381 - main - INFO - Splitting data: Train (2765), Val (592), Test (593)
+2025-07-07 00:28:22,149 - main - INFO - Actual Train samples: 2763, Val samples: 589, Test samples: 592
+2025-07-07 00:28:22,224 - main - INFO - Train batches: 173, Val batches: 37, Test batches: 37
+2025-07-07 00:28:23,623 - main - INFO - Model architecture:
+MultimodalCrimeDetector(
+  (text_embedder): Sequential(
+    (0): Linear(in_features=768, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.3, inplace=False)
+  )
+  (video_embedder): Sequential(
+    (0): Linear(in_features=512, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.3, inplace=False)
+  )
+  (audio_embedder): Sequential(
+    (0): Linear(in_features=1024, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.3, inplace=False)
+  )
+  (fusion_layer): Sequential(
+    (0): Linear(in_features=768, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.3, inplace=False)
+  )
+  (classifier): Linear(in_features=512, out_features=2, bias=True)
+)
+2025-07-07 00:28:23,623 - main - INFO - Optimizer: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    decoupled_weight_decay: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 0.0001
+    maximize: False
+    weight_decay: 1e-05
+)
+2025-07-07 00:28:23,623 - main - INFO - Loss function: CrossEntropyLoss()
+2025-07-07 00:28:23,651 - main - INFO - Resuming training from epoch 15 with previous best validation loss 0.1437
+2025-07-07 00:28:23,651 - main - INFO - Starting training loop...
+2025-07-07 00:28:55,070 - main - INFO - Epoch [15/50], Batch [50/173], Loss: 0.0078, Batch Acc: 97.75%
+2025-07-07 00:29:03,616 - main - INFO - Epoch [15/50], Batch [100/173], Loss: 0.2405, Batch Acc: 97.50%
+2025-07-07 00:29:12,003 - main - INFO - Epoch [15/50], Batch [150/173], Loss: 0.0163, Batch Acc: 97.71%
+2025-07-07 00:29:15,880 - main - INFO - Epoch 15 Training Summary: Avg Loss: 0.0717, Accuracy: 97.68%
+2025-07-07 00:29:44,840 - main - INFO - Validation Results: Loss: 0.1525, Accuracy: 93.72%, Precision: 0.9360, Recall: 0.9392, F1: 0.9376, AUC-ROC: 0.9880
+2025-07-07 00:29:44,840 - main - INFO - Epoch 15 finished in 81.19 seconds.
+2025-07-07 00:29:44,840 - main - INFO - Early stopping patience: 1/10
+2025-07-07 00:30:07,757 - main - INFO - Epoch [16/50], Batch [50/173], Loss: 0.0431, Batch Acc: 97.87%
+2025-07-07 00:30:08,057 - main - INFO - Epoch [16/50], Batch [100/173], Loss: 0.0734, Batch Acc: 97.44%
+2025-07-07 00:30:08,373 - main - INFO - Epoch [16/50], Batch [150/173], Loss: 0.1706, Batch Acc: 97.58%
+2025-07-07 00:30:09,264 - main - INFO - Epoch 16 Training Summary: Avg Loss: 0.0747, Accuracy: 97.68%
+2025-07-07 00:30:32,640 - main - INFO - Validation Results: Loss: 0.1491, Accuracy: 94.06%, Precision: 0.9394, Recall: 0.9426, F1: 0.9410, AUC-ROC: 0.9876
+2025-07-07 00:30:32,640 - main - INFO - Epoch 16 finished in 47.80 seconds.
+2025-07-07 00:30:32,640 - main - INFO - Early stopping patience: 2/10
+2025-07-07 00:30:55,555 - main - INFO - Epoch [17/50], Batch [50/173], Loss: 0.0303, Batch Acc: 98.62%
+2025-07-07 00:30:55,857 - main - INFO - Epoch [17/50], Batch [100/173], Loss: 0.0147, Batch Acc: 98.12%
+2025-07-07 00:30:56,189 - main - INFO - Epoch [17/50], Batch [150/173], Loss: 0.0810, Batch Acc: 97.92%
+2025-07-07 00:30:57,073 - main - INFO - Epoch 17 Training Summary: Avg Loss: 0.0633, Accuracy: 97.79%
+2025-07-07 00:31:20,156 - main - INFO - Validation Results: Loss: 0.1685, Accuracy: 93.89%, Precision: 0.9577, Recall: 0.9189, F1: 0.9379, AUC-ROC: 0.9859
+2025-07-07 00:31:20,156 - main - INFO - Epoch 17 finished in 47.52 seconds.
+2025-07-07 00:31:20,156 - main - INFO - Early stopping patience: 3/10
+2025-07-07 00:31:42,575 - main - INFO - Epoch [18/50], Batch [50/173], Loss: 0.0514, Batch Acc: 97.87%
+2025-07-07 00:31:42,823 - main - INFO - Epoch [18/50], Batch [100/173], Loss: 0.3421, Batch Acc: 98.00%
+2025-07-07 00:31:43,073 - main - INFO - Epoch [18/50], Batch [150/173], Loss: 0.2850, Batch Acc: 98.04%
+2025-07-07 00:31:43,973 - main - INFO - Epoch 18 Training Summary: Avg Loss: 0.0601, Accuracy: 97.94%
+2025-07-07 00:32:07,107 - main - INFO - Validation Results: Loss: 0.1638, Accuracy: 93.89%, Precision: 0.9514, Recall: 0.9257, F1: 0.9384, AUC-ROC: 0.9867
+2025-07-07 00:32:07,108 - main - INFO - Epoch 18 finished in 46.95 seconds.
+2025-07-07 00:32:07,108 - main - INFO - Early stopping patience: 4/10
+2025-07-07 00:32:29,177 - main - INFO - Epoch [19/50], Batch [50/173], Loss: 0.0248, Batch Acc: 98.00%
+2025-07-07 00:32:29,507 - main - INFO - Epoch [19/50], Batch [100/173], Loss: 0.2081, Batch Acc: 97.81%
+2025-07-07 00:32:29,739 - main - INFO - Epoch [19/50], Batch [150/173], Loss: 0.0217, Batch Acc: 98.08%
+2025-07-07 00:32:30,673 - main - INFO - Epoch 19 Training Summary: Avg Loss: 0.0538, Accuracy: 98.15%
+2025-07-07 00:32:53,390 - main - INFO - Validation Results: Loss: 0.1803, Accuracy: 93.38%, Precision: 0.9105, Recall: 0.9628, F1: 0.9360, AUC-ROC: 0.9879
+2025-07-07 00:32:53,400 - main - INFO - Epoch 19 finished in 46.29 seconds.
+2025-07-07 00:32:53,400 - main - INFO - Early stopping patience: 5/10
+2025-07-07 00:33:16,160 - main - INFO - Epoch [20/50], Batch [50/173], Loss: 0.0037, Batch Acc: 98.75%
+2025-07-07 00:33:16,434 - main - INFO - Epoch [20/50], Batch [100/173], Loss: 0.0673, Batch Acc: 98.44%
+2025-07-07 00:33:16,680 - main - INFO - Epoch [20/50], Batch [150/173], Loss: 0.1090, Batch Acc: 98.29%
+2025-07-07 00:33:17,588 - main - INFO - Epoch 20 Training Summary: Avg Loss: 0.0531, Accuracy: 98.19%
+2025-07-07 00:33:40,910 - main - INFO - Validation Results: Loss: 0.1883, Accuracy: 93.72%, Precision: 0.9609, Recall: 0.9122, F1: 0.9359, AUC-ROC: 0.9853
+2025-07-07 00:33:40,911 - main - INFO - Epoch 20 finished in 47.51 seconds.
+2025-07-07 00:33:40,911 - main - INFO - Early stopping patience: 6/10
+2025-07-07 00:34:03,527 - main - INFO - Epoch [21/50], Batch [50/173], Loss: 0.0415, Batch Acc: 99.00%
+2025-07-07 00:34:03,774 - main - INFO - Epoch [21/50], Batch [100/173], Loss: 0.0768, Batch Acc: 98.69%
+2025-07-07 00:34:04,090 - main - INFO - Epoch [21/50], Batch [150/173], Loss: 0.0130, Batch Acc: 98.17%
+2025-07-07 00:34:04,963 - main - INFO - Epoch 21 Training Summary: Avg Loss: 0.0582, Accuracy: 97.94%
+2025-07-07 00:34:27,440 - main - INFO - Validation Results: Loss: 0.1688, Accuracy: 93.72%, Precision: 0.9512, Recall: 0.9223, F1: 0.9365, AUC-ROC: 0.9878
+2025-07-07 00:34:27,440 - main - INFO - Epoch 21 finished in 46.53 seconds.
+2025-07-07 00:34:27,440 - main - INFO - Early stopping patience: 7/10
+2025-07-07 00:34:49,475 - main - INFO - Epoch [22/50], Batch [50/173], Loss: 0.0037, Batch Acc: 98.25%
+2025-07-07 00:34:49,762 - main - INFO - Epoch [22/50], Batch [100/173], Loss: 0.0384, Batch Acc: 98.44%
+2025-07-07 00:34:50,057 - main - INFO - Epoch [22/50], Batch [150/173], Loss: 0.1663, Batch Acc: 98.25%
+2025-07-07 00:34:50,956 - main - INFO - Epoch 22 Training Summary: Avg Loss: 0.0535, Accuracy: 98.37%
+2025-07-07 00:35:13,890 - main - INFO - Validation Results: Loss: 0.1695, Accuracy: 93.72%, Precision: 0.9481, Recall: 0.9257, F1: 0.9368, AUC-ROC: 0.9873
+2025-07-07 00:35:13,890 - main - INFO - Epoch 22 finished in 46.45 seconds.
+2025-07-07 00:35:13,890 - main - INFO - Early stopping patience: 8/10
+2025-07-07 00:35:36,271 - main - INFO - Epoch [23/50], Batch [50/173], Loss: 0.0625, Batch Acc: 98.50%
+2025-07-07 00:35:36,595 - main - INFO - Epoch [23/50], Batch [100/173], Loss: 0.0042, Batch Acc: 98.25%
+2025-07-07 00:35:36,877 - main - INFO - Epoch [23/50], Batch [150/173], Loss: 0.0476, Batch Acc: 98.46%
+2025-07-07 00:35:37,795 - main - INFO - Epoch 23 Training Summary: Avg Loss: 0.0401, Accuracy: 98.52%
+2025-07-07 00:36:00,774 - main - INFO - Validation Results: Loss: 0.1857, Accuracy: 93.72%, Precision: 0.9111, Recall: 0.9696, F1: 0.9394, AUC-ROC: 0.9887
+2025-07-07 00:36:00,774 - main - INFO - Epoch 23 finished in 46.88 seconds.
+2025-07-07 00:36:00,774 - main - INFO - Early stopping patience: 9/10
+2025-07-07 00:36:23,697 - main - INFO - Epoch [24/50], Batch [50/173], Loss: 0.0634, Batch Acc: 98.87%
+2025-07-07 00:36:23,959 - main - INFO - Epoch [24/50], Batch [100/173], Loss: 0.0038, Batch Acc: 98.69%
+2025-07-07 00:36:24,192 - main - INFO - Epoch [24/50], Batch [150/173], Loss: 0.0159, Batch Acc: 98.67%
+2025-07-07 00:36:25,109 - main - INFO - Epoch 24 Training Summary: Avg Loss: 0.0405, Accuracy: 98.59%
+2025-07-07 00:36:48,443 - main - INFO - Validation Results: Loss: 0.1882, Accuracy: 94.06%, Precision: 0.9251, Recall: 0.9595, F1: 0.9420, AUC-ROC: 0.9874
+2025-07-07 00:36:48,443 - main - INFO - Epoch 24 finished in 47.67 seconds.
+2025-07-07 00:36:48,443 - main - INFO - Early stopping patience: 10/10
+2025-07-07 00:36:48,443 - main - INFO - Early stopping triggered at epoch 24. No improvement in validation loss for 10 epochs.
+2025-07-07 00:36:48,443 - main - INFO - Training complete.
+2025-07-07 00:36:48,443 - main - INFO - Evaluating on test set...
+2025-07-07 00:37:17,676 - main - INFO - Test Results: Loss: 0.2115, Accuracy: 91.89%, Precision: 0.9130, Recall: 0.9254, F1: 0.9192, AUC-ROC: 0.9767
+2025-07-07 00:37:17,676 - main - INFO - Final Test Set Metrics:
+2025-07-07 00:37:17,676 - main - INFO -   Accuracy: 91.89%
+2025-07-07 00:37:17,676 - main - INFO -   Precision: 0.9130
+2025-07-07 00:37:17,676 - main - INFO -   Recall: 0.9254
+2025-07-07 00:37:17,676 - main - INFO -   F1-Score: 0.9192
+2025-07-07 00:37:17,683 - main - INFO -   AUC-ROC: 0.9767
+2025-07-07 00:37:17,683 - main - INFO - Script finished.

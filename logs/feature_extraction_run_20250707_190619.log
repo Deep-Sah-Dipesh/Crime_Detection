@@ -1,0 +1,177 @@
+2025-07-07 19:06:19,739 - FeatureExtractionRunner - INFO - ================================================================================
+2025-07-07 19:06:19,739 - FeatureExtractionRunner - INFO - STARTING ALL FEATURE EXTRACTION PIPELINES
+2025-07-07 19:06:19,739 - FeatureExtractionRunner - INFO - Log file: g:\Crime_Detection\logs\feature_extraction_run_20250707_190619.log
+2025-07-07 19:06:19,739 - FeatureExtractionRunner - INFO - Feature output base directories: {'audio': 'g:\\Crime_Detection\\Training\\Processed_Data\\audio_features', 'video': 'g:\\Crime_Detection\\Training\\Processed_Data\\video_features', 'text': 'g:\\Crime_Detection\\Training\\Processed_Data\\text_features'}
+2025-07-07 19:06:19,739 - FeatureExtractionRunner - INFO - ================================================================================
+2025-07-07 19:06:19,739 - FeatureExtractionRunner - INFO - Initializing RobustTextFeatureExtractor...
+2025-07-07 19:06:22,040 - FeatureExtractionRunner - INFO - RobustTextFeatureExtractor initialized.
+2025-07-07 19:06:22,040 - FeatureExtractionRunner - INFO - Initializing AudioFeatureExtractor...
+2025-07-07 19:06:22,041 - AudioExtractor - INFO - Attempting loading strategy 1...
+2025-07-07 19:06:22,041 - absl - INFO - Using g:\Crime_Detection\Training\Processed_Data\tfhub_cache to cache modules.
+2025-07-07 19:06:22,089 - tensorflow - WARNING - From c:\Users\admin\anaconda3\envs\new_crime_env2\lib\site-packages\tensorflow_hub\resolver.py:120: The name tf.gfile.MakeDirs is deprecated. Please use tf.io.gfile.makedirs instead.
+
+2025-07-07 19:06:22,089 - tensorflow - WARNING - From c:\Users\admin\anaconda3\envs\new_crime_env2\lib\site-packages\tensorflow_hub\module_v2.py:126: The name tf.saved_model.load_v2 is deprecated. Please use tf.compat.v2.saved_model.load instead.
+
+2025-07-07 19:06:24,856 - absl - INFO - Fingerprint not found. Saved model loading will continue.
+2025-07-07 19:06:24,856 - absl - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-07-07 19:06:24,872 - AudioExtractor - INFO - Loaded 521 class names
+2025-07-07 19:06:24,872 - AudioExtractor - INFO - Successfully loaded YAMNet using strategy 1
+2025-07-07 19:06:24,872 - FeatureExtractionRunner - INFO - AudioFeatureExtractor initialized.
+2025-07-07 19:06:24,872 - FeatureExtractionRunner - INFO - Initializing VideoFeatureExtractor...
+2025-07-07 19:06:25,256 - VideoExtractor - INFO - ResNet50 CNN model loaded successfully.
+2025-07-07 19:06:25,356 - VideoExtractor - INFO - LSTM sequence encoder loaded successfully.
+2025-07-07 19:06:25,356 - VideoExtractor - INFO - Video Feature Extractor initialized with frame_rate=1, sequence_length=16, device=cuda
+2025-07-07 19:06:25,356 - FeatureExtractionRunner - INFO - VideoFeatureExtractor initialized.
+2025-07-07 19:06:25,356 - FeatureExtractionRunner - INFO - 
+Scanning for raw video files to process...
+2025-07-07 19:06:25,422 - FeatureExtractionRunner - INFO - Found 3950 video files in g:\Crime_Detection\Training\Videos
+2025-07-07 19:06:25,422 - FeatureExtractionRunner - INFO - 
+Starting feature extraction for all files...
+2025-07-07 19:06:44,472 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-01-45_00-02-50_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:06:44,477 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-01-45_00-02-50_label_A.mp4 (returned None).
+2025-07-07 19:06:44,477 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#00-01-45_00-02-50_label_A.wav. Skipping.
+2025-07-07 19:07:03,642 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-03-00_00-04-05_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:07:03,659 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-03-00_00-04-05_label_A.mp4 (returned None).
+2025-07-07 19:07:03,660 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#00-03-00_00-04-05_label_A.wav. Skipping.
+2025-07-07 19:07:25,659 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-04-20_00-05-35_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:07:25,659 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-04-20_00-05-35_label_A.mp4 (returned None).
+2025-07-07 19:07:25,659 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#00-04-20_00-05-35_label_A.wav. Skipping.
+2025-07-07 19:08:09,743 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-05-52_00-08-22_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:08:09,752 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-05-52_00-08-22_label_A.mp4 (returned None).
+2025-07-07 19:08:09,753 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#00-05-52_00-08-22_label_A.wav. Skipping.
+2025-07-07 19:08:44,506 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-08-55_00-10-50_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:08:44,522 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-08-55_00-10-50_label_A.mp4 (returned None).
+2025-07-07 19:08:44,523 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#00-08-55_00-10-50_label_A.wav. Skipping.
+2025-07-07 19:08:59,685 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-16-18_00-17-09_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:08:59,691 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-16-18_00-17-09_label_A.mp4 (returned None).
+2025-07-07 19:08:59,691 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#00-16-18_00-17-09_label_A.wav. Skipping.
+2025-07-07 19:09:45,379 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-20-35_00-23-06_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:09:45,394 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-20-35_00-23-06_label_A.mp4 (returned None).
+2025-07-07 19:09:45,394 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#00-20-35_00-23-06_label_A.wav. Skipping.
+2025-07-07 19:09:58,060 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-23-50_00-24-31_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:09:58,068 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-23-50_00-24-31_label_A.mp4 (returned None).
+2025-07-07 19:09:58,068 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#00-23-50_00-24-31_label_A.wav. Skipping.
+2025-07-07 19:10:16,108 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-31-05_00-32-05_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:10:16,117 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-31-05_00-32-05_label_A.mp4 (returned None).
+2025-07-07 19:10:16,117 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#00-31-05_00-32-05_label_A.wav. Skipping.
+2025-07-07 19:11:38,334 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-32-07_00-36-45_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:11:38,345 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-32-07_00-36-45_label_A.mp4 (returned None).
+2025-07-07 19:11:38,345 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#00-32-07_00-36-45_label_A.wav. Skipping.
+2025-07-07 19:12:30,957 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-37-40_00-40-31_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:12:30,957 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-37-40_00-40-31_label_A.mp4 (returned None).
+2025-07-07 19:12:30,972 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#00-37-40_00-40-31_label_A.wav. Skipping.
+2025-07-07 19:13:16,841 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-42-52_00-45-31_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:13:16,850 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-42-52_00-45-31_label_A.mp4 (returned None).
+2025-07-07 19:13:16,850 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#00-42-52_00-45-31_label_A.wav. Skipping.
+2025-07-07 19:13:48,941 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-45-40_00-47-30_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:13:48,952 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-45-40_00-47-30_label_A.mp4 (returned None).
+2025-07-07 19:13:48,952 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#00-45-40_00-47-30_label_A.wav. Skipping.
+2025-07-07 19:14:05,462 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-57-20_00-58-17_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:14:05,478 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-57-20_00-58-17_label_A.mp4 (returned None).
+2025-07-07 19:14:05,478 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#00-57-20_00-58-17_label_A.wav. Skipping.
+2025-07-07 19:15:20,724 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-58-18_01-02-30_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:15:20,730 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#00-58-18_01-02-30_label_A.mp4 (returned None).
+2025-07-07 19:15:20,730 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#00-58-18_01-02-30_label_A.wav. Skipping.
+2025-07-07 19:16:37,763 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#01-21-22_01-25-40_label_A.wav. Skipping.
+2025-07-07 19:17:09,363 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#01-26-10_01-28-00_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:17:09,382 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#01-26-10_01-28-00_label_A.mp4 (returned None).
+2025-07-07 19:17:09,382 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#01-26-10_01-28-00_label_A.wav. Skipping.
+2025-07-07 19:17:35,592 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#01-29-31_01-31-00_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:17:35,612 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#01-29-31_01-31-00_label_A.mp4 (returned None).
+2025-07-07 19:17:35,612 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#01-29-31_01-31-00_label_A.wav. Skipping.
+2025-07-07 19:18:09,918 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#01-39-05_01-41-00_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:18:09,926 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#01-39-05_01-41-00_label_A.mp4 (returned None).
+2025-07-07 19:18:09,926 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#01-39-05_01-41-00_label_A.wav. Skipping.
+2025-07-07 19:19:19,145 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#01-42-06_01-45-53_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:19:19,158 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#01-42-06_01-45-53_label_A.mp4 (returned None).
+2025-07-07 19:19:19,158 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#01-42-06_01-45-53_label_A.wav. Skipping.
+2025-07-07 19:19:52,492 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#01-46-20_01-48-10_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:19:52,508 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#01-46-20_01-48-10_label_A.mp4 (returned None).
+2025-07-07 19:19:52,508 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#01-46-20_01-48-10_label_A.wav. Skipping.
+2025-07-07 19:20:12,936 - VideoExtractor - ERROR - Error processing video g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#01-50-50_01-52-00_label_A.mp4: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+Traceback (most recent call last):
+  File "g:\Crime_Detection\Code\feature_extraction\video_extractor.py", line 160, in extract
+    lstm_feature = self.lstm_model(sequence_tensor).squeeze().cpu().numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+2025-07-07 19:20:12,945 - VideoExtractor - ERROR - Failed to extract features from g:\Crime_Detection\Training\Videos\1-1004\A.Beautiful.Mind.2001__#01-50-50_01-52-00_label_A.mp4 (returned None).
+2025-07-07 19:20:12,946 - AudioExtractor - WARNING - Audio file not found: g:\Crime_Detection\Training\Processed_Data\Audios\1-1004\A.Beautiful.Mind.2001__#01-50-50_01-52-00_label_A.wav. Skipping.

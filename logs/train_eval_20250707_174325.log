@@ -1,0 +1,7 @@
+2025-07-07 17:43:25 - main_train_eval - INFO - Starting training/evaluation script.
+2025-07-07 17:43:25 - main_train_eval - INFO - Using device: cuda
+2025-07-07 17:43:25 - main_train_eval - INFO - Random seed set to 42 for reproducibility.
+2025-07-07 17:43:25 - main_train_eval - INFO - Loading existing data splits from g:\Crime_Detection\data_splits\data_splits.json
+2025-07-07 17:43:25 - main_train_eval - INFO - Loaded splits: Train=2764, Val=593, Test=593
+2025-07-07 17:43:25 - main_train_eval - INFO - Initializing datasets...
+2025-07-07 17:43:25 - main_train_eval - CRITICAL - Training dataset is EMPTY after filtering missing features. Cannot proceed with training. Ensure features are extracted and feature_metadata.json is correct.
