@@ -1,0 +1,8 @@
+2025-07-08 20:30:31 - MainProjectRunner - INFO - ================================================================================
+2025-07-08 20:30:31 - MainProjectRunner - INFO - STARTING MAIN PROJECT RUNNER
+2025-07-08 20:30:31 - MainProjectRunner - INFO - Log file for runner: g:\Crime_Detection\logs\main_runner_log_20250708_203031.log
+2025-07-08 20:30:31 - MainProjectRunner - INFO - Detected Project Root: g:\Crime_Detection
+2025-07-08 20:30:31 - MainProjectRunner - INFO - Code Directory: g:\Crime_Detection\Code
+2025-07-08 20:30:31 - MainProjectRunner - INFO - 
+Running feature extraction...
+2025-07-08 20:30:31 - MainProjectRunner - INFO - Attempting to run: g:\Crime_Detection\Code\run_all_feature_extraction.py

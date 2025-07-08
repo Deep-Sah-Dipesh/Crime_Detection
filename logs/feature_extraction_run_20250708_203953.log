@@ -1,0 +1,4 @@
+2025-07-08 20:39:53 - FeatureExtractionRunner - INFO - STARTING ALL FEATURE EXTRACTION PIPELINES
+2025-07-08 20:39:53 - FeatureExtractionRunner - INFO - Log file: g:\Crime_Detection\logs\feature_extraction_run_20250708_203953.log
+2025-07-08 20:39:58 - FeatureExtractionRunner - INFO - Found 3950 raw video files to process.
+2025-07-08 20:39:58 - FeatureExtractionRunner - INFO - Starting feature extraction process...

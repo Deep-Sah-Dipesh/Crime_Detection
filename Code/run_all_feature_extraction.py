@@ -1,181 +1,117 @@
-# Crime_Detection/Code/run_all_feature_extraction.py
-
 import os
 import sys
 import logging
 from tqdm import tqdm
 from datetime import datetime
 
-# Adjust sys.path to import from project root
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from config import BASE_PATHS, FEATURE_PATHS, OUTPUT_DIRS # Import OUTPUT_DIRS
-from utils import setup_logger, get_timestamp, find_files_in_directory
+from config import BASE_PATHS, FEATURE_PATHS, OUTPUT_DIRS
+from utils import setup_logger, get_logger, get_timestamp, find_files_in_directory
 
-# Import individual extraction functions and their classes
 from feature_extraction.text_extractor import extract_text_features, RobustTextFeatureExtractor
 from feature_extraction.audio_extractor import extract_audio_features, AudioFeatureExtractor
 from feature_extraction.video_extractor import extract_video_features, VideoFeatureExtractor
 
 def main():
-    # --- Setup Logging ---
     log_dir = OUTPUT_DIRS['logs']
     os.makedirs(log_dir, exist_ok=True)
     timestamp = get_timestamp()
     
-    # Configure the main logger for this run
     run_logger = setup_logger('FeatureExtractionRunner', os.path.join(log_dir, f'feature_extraction_run_{timestamp}.log'))
-    run_logger.info("="*80)
     run_logger.info("STARTING ALL FEATURE EXTRACTION PIPELINES")
-    run_logger.info(f"Log file: {os.path.join(log_dir, f'feature_extraction_run_{timestamp}.log')}")
-    run_logger.info(f"Feature output base directories: {FEATURE_PATHS}")
-    run_logger.info("="*80)
+    run_logger.info(f"Log file: {os.path.join(log_dir, f'feature_extraction_run_{timestamp}.log')}\n")
 
-    # --- Initialize Feature Extractor Models (once) ---
-    text_extractor = None
-    audio_extractor = None
-    video_extractor = None
+    text_extractor = RobustTextFeatureExtractor()
+    audio_extractor = AudioFeatureExtractor()
+    video_extractor = VideoFeatureExtractor()
 
-    try:
-        run_logger.info("Initializing RobustTextFeatureExtractor...")
-        text_extractor = RobustTextFeatureExtractor()
-        run_logger.info("RobustTextFeatureExtractor initialized.")
-    except Exception as e:
-        run_logger.critical(f"FATAL: Could not initialize RobustTextFeatureExtractor. Aborting. Error: {e}")
-        sys.exit(1)
+    raw_videos_root = BASE_PATHS['raw_videos']
+    all_video_sub_paths = find_files_in_directory(raw_videos_root, ['.mp4', '.avi', '.mov'])
 
-    try:
-        run_logger.info("Initializing AudioFeatureExtractor...")
-        audio_extractor = AudioFeatureExtractor()
-        run_logger.info("AudioFeatureExtractor initialized.")
-    except Exception as e:
-        run_logger.critical(f"FATAL: Could not initialize AudioFeatureExtractor. Aborting. Error: {e}")
-        sys.exit(1)
-
-    try:
-        run_logger.info("Initializing VideoFeatureExtractor...")
-        video_extractor = VideoFeatureExtractor()
-        run_logger.info("VideoFeatureExtractor initialized.")
-    except Exception as e:
-        run_logger.critical(f"FATAL: Could not initialize VideoFeatureExtractor. Aborting. Error: {e}")
-        sys.exit(1)
-
-    # --- Collect all raw files (based on video files) ---
-    run_logger.info("\nScanning for raw video files to process...")
-    video_extensions = ('.mp4', '.avi', '.mov', '.mkv')
-    raw_video_files = find_files_in_directory(BASE_PATHS['raw_videos'], video_extensions)
-    total_files_to_process = len(raw_video_files)
-    run_logger.info(f"Found {total_files_to_process} video files in {BASE_PATHS['raw_videos']}")
-
-    if total_files_to_process == 0:
-        run_logger.warning("No video files found. Nothing to extract. Exiting.")
+    if not all_video_sub_paths:
+        run_logger.error(f"No video files found in {raw_videos_root}. Exiting feature extraction.")
         return
 
-    # --- Process Files ---
-    processed_count = 0 
-    skipped_count = 0 
-    re_extracted_count = 0 
-    failed_count = 0 
+    total_files_to_process = len(all_video_sub_paths)
+    processed_count = 0
+    skipped_count = 0
+    re_extracted_count = 0
+    failed_count = 0
 
-    run_logger.info("\nStarting feature extraction for all files...")
-    with tqdm(total=total_files_to_process, desc="Overall Feature Extraction") as pbar:
-        for relative_video_path in raw_video_files:
-            # Extract range_folder and filename_base_no_ext
-            range_folder = os.path.dirname(relative_video_path)
-            if not range_folder:
-                range_folder = "" # For top-level files
+    run_logger.info(f"Found {total_files_to_process} raw video files to process.")
+    run_logger.info("Starting feature extraction process...\n")
 
-            filename_base_no_ext = os.path.splitext(os.path.basename(relative_video_path))[0]
-
-            # Construct full raw paths (assuming consistent naming for audio/transcript)
-            raw_video_path = os.path.join(BASE_PATHS['raw_videos'], relative_video_path)
-            raw_audio_path = os.path.join(BASE_PATHS['raw_audios'], range_folder, f"{filename_base_no_ext}.wav")
-            raw_transcript_path = os.path.join(BASE_PATHS['raw_transcripts'], range_folder, f"{filename_base_no_ext}.txt")
-
-            # Construct output feature paths based on the project structure
-            video_output_dir = os.path.join(FEATURE_PATHS['video'], range_folder, filename_base_no_ext)
-            video_output_path = os.path.join(video_output_dir, f"{filename_base_no_ext}_all.npy")
-
-            audio_output_dir = os.path.join(FEATURE_PATHS['audio'], range_folder, filename_base_no_ext)
-            audio_output_path = os.path.join(audio_output_dir, f"{filename_base_no_ext}_yamnet_embeddings.npy")
-
-            text_output_dir = os.path.join(FEATURE_PATHS['text'], range_folder) 
-            text_output_path = os.path.join(text_output_dir, f"{filename_base_no_ext}_roberta_features.npy")
-
-            # Check if all features exist
-            video_exists = os.path.exists(video_output_path)
-            audio_exists = os.path.exists(audio_output_path)
-            text_exists = os.path.exists(text_output_path)
-
-            status_msg = f"{relative_video_path} - "
-            current_file_extracted_any = False 
+    with tqdm(total=total_files_to_process, desc="Overall Feature Extraction Progress", unit="file", file=sys.stdout) as pbar:
+        for video_sub_path in all_video_sub_paths:
+            full_video_path = os.path.join(BASE_PATHS['raw_videos'], video_sub_path)
             
-            if video_exists and audio_exists and text_exists:
+            # Example video_sub_path: '1-1004/A.Beautiful.Mind.2001__#00-01-45_00-02-50_label_A.mp4'
+            # clip_dir_relative: '1-1004'
+            # clip_filename_base: 'A.Beautiful.Mind.2001__#00-01-45_00-02-50_label_A'
+            clip_dir_relative = os.path.dirname(video_sub_path)
+            clip_filename_base = os.path.splitext(os.path.basename(video_sub_path))[0]
+
+            # Define the specific output directories for features for this clip
+            # For video and audio, features go into a subfolder named after the clip_filename_base
+            # For text, features go directly into the range_folder
+            video_feature_output_dir = os.path.join(FEATURE_PATHS['video'], clip_dir_relative, clip_filename_base)
+            audio_feature_output_dir = os.path.join(FEATURE_PATHS['audio'], clip_dir_relative, clip_filename_base)
+            text_feature_output_dir = os.path.join(FEATURE_PATHS['text'], clip_dir_relative)
+
+            # Expected final paths for checking existence
+            video_final_feature_file = os.path.join(video_feature_output_dir, f"{clip_filename_base}_all.npy")
+            audio_final_feature_file = os.path.join(audio_feature_output_dir, f"{clip_filename_base}_yamnet_embeddings.npy")
+            text_final_feature_file = os.path.join(text_feature_output_dir, f"{clip_filename_base}_roberta_features.npy")
+
+            all_features_exist = (
+                os.path.exists(video_final_feature_file) and
+                os.path.exists(audio_final_feature_file) and
+                os.path.exists(text_final_feature_file)
+            )
+
+            status_msg = f"Processing {video_sub_path}: "
+
+            if all_features_exist:
                 skipped_count += 1
-                status_msg += "All features already exist. Skipped."
-                run_logger.debug(status_msg)
+                status_msg += "All features already exist. Skipping."
+                run_logger.info(status_msg)
             else:
-                pbar.set_description(f"Processing: {filename_base_no_ext}")
+                raw_audio_path = os.path.join(BASE_PATHS['raw_audios'], clip_dir_relative, f"{clip_filename_base}.wav")
+                raw_transcript_path = os.path.join(BASE_PATHS['raw_transcripts'], clip_dir_relative, f"{clip_filename_base}.txt")
                 
-                # --- Text Extraction ---
-                if not text_exists:
-                    pbar.write(f"  Extracting TEXT for {filename_base_no_ext}...")
-                    if os.path.exists(raw_transcript_path):
-                        success = extract_text_features(
-                            transcript_path=raw_transcript_path, 
-                            output_dir=text_output_dir, 
-                            filename_base=filename_base_no_ext, 
-                            extractor_instance=text_extractor
-                        )
-                        if not success:
-                            run_logger.error(f"  Failed to extract TEXT features for {filename_base_no_ext}.")
-                        else:
-                            current_file_extracted_any = True
-                    else:
-                        run_logger.warning(f"  Transcript not found for {filename_base_no_ext} at {raw_transcript_path}. Skipping text extraction.")
+                extracted_any = False
                 
-                # --- Audio Extraction ---
-                if not audio_exists:
-                    pbar.write(f"  Extracting AUDIO for {filename_base_no_ext}...")
-                    if os.path.exists(raw_audio_path):
-                        success = extract_audio_features(
-                            audio_path=raw_audio_path, 
-                            output_dir=audio_output_dir, 
-                            filename_base=filename_base_no_ext, 
-                            extractor_instance=audio_extractor
-                        )
-                        if not success:
-                            run_logger.error(f"  Failed to extract AUDIO features for {filename_base_no_ext}.")
-                        else:
-                            current_file_extracted_any = True
-                    else:
-                        run_logger.warning(f"  Raw audio not found for {filename_base_no_ext} at {raw_audio_path}. Skipping audio extraction.")
+                # Video Feature Extraction
+                if not os.path.exists(video_final_feature_file):
+                    run_logger.info(f"  Extracting video features for {clip_filename_base}...")
+                    if extract_video_features(full_video_path, video_feature_output_dir, clip_filename_base, video_extractor):
+                        extracted_any = True
+                else:
+                    run_logger.debug(f"  Video features for {clip_filename_base} already exist.")
 
-                # --- Video Extraction ---
-                if not video_exists:
-                    pbar.write(f"  Extracting VIDEO for {filename_base_no_ext}...")
-                    if os.path.exists(raw_video_path):
-                        success = extract_video_features(
-                            video_path=raw_video_path, 
-                            output_dir=video_output_dir, 
-                            filename_base=filename_base_no_ext, 
-                            extractor_instance=video_extractor
-                        )
-                        if not success:
-                            run_logger.error(f"  Failed to extract VIDEO features for {filename_base_no_ext}.")
-                        else:
-                            current_file_extracted_any = True
-                    else:
-                        run_logger.warning(f"  Raw video not found for {filename_base_no_ext} at {raw_video_path}. Skipping video extraction.")
+                # Audio Feature Extraction
+                if not os.path.exists(audio_final_feature_file):
+                    run_logger.info(f"  Extracting audio features for {clip_filename_base}...")
+                    if extract_audio_features(raw_audio_path, audio_feature_output_dir, clip_filename_base, audio_extractor):
+                        extracted_any = True
+                else:
+                    run_logger.debug(f"  Audio features for {clip_filename_base} already exist.")
 
-                # Update counts based on the outcome of this pass
-                if current_file_extracted_any:
+                # Text Feature Extraction
+                if not os.path.exists(text_final_feature_file):
+                    run_logger.info(f"  Extracting text features for {clip_filename_base}...")
+                    if extract_text_features(raw_transcript_path, text_feature_output_dir, clip_filename_base, text_extractor):
+                        extracted_any = True
+                else:
+                    run_logger.debug(f"  Text features for {clip_filename_base} already exist.")
+                
+                if extracted_any:
                     re_extracted_count += 1
                 
-                # Re-check existence after extraction attempts to confirm if all are now present
-                video_exists_after = os.path.exists(video_output_path)
-                audio_exists_after = os.path.exists(audio_output_path)
-                text_exists_after = os.path.exists(text_output_path)
+                video_exists_after = os.path.exists(video_final_feature_file)
+                audio_exists_after = os.path.exists(audio_final_feature_file)
+                text_exists_after = os.path.exists(text_final_feature_file)
 
                 if video_exists_after and audio_exists_after and text_exists_after:
                     processed_count += 1
@@ -188,15 +124,14 @@ def main():
 
             pbar.update(1)
 
-    # --- Final Summary ---
     run_logger.info("\n" + "="*80)
     run_logger.info("ALL FEATURE EXTRACTION PIPELINES COMPLETED")
     run_logger.info(f"Total raw video files scanned: {total_files_to_process}")
-    run_logger.info(f"Successfully processed (all features now present): {processed_count}")
-    run_logger.info(f"Skipped (all features already existed at start): {skipped_count}")
-    run_logger.info(f"Re-extracted (at least one missing feature was successfully extracted): {re_extracted_count}")
-    run_logger.info(f"Failed (at least one feature could not be extracted or raw file missing): {failed_count}")
+    run_logger.info(f"Successfully processed (all features now present, either initially or after extraction): {processed_count + skipped_count}")
+    run_logger.info(f"  (This includes {skipped_count} files that had all features already and {processed_count} files that achieved all features after extraction attempts)")
+    run_logger.info(f"Attempted re-extraction (at least one missing feature was targeted): {re_extracted_count}")
+    run_logger.info(f"Failed (at least one feature could not be extracted or raw file missing and remained missing): {failed_count}")
     run_logger.info("="*80)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -1,0 +1,15 @@
+2025-07-08 20:31:31 - FeatureExtractionRunner - INFO - ================================================================================
+2025-07-08 20:31:31 - FeatureExtractionRunner - INFO - STARTING ALL FEATURE EXTRACTION PIPELINES
+2025-07-08 20:31:31 - FeatureExtractionRunner - INFO - Log file: g:\Crime_Detection\logs\feature_extraction_run_20250708_203131.log
+
+2025-07-08 20:31:31 - FeatureExtractionRunner - INFO - Using raw video path: g:\Crime_Detection\Training\Videos
+2025-07-08 20:31:31 - FeatureExtractionRunner - INFO - Using raw audio path: g:\Crime_Detection\Training\Processed_Data\Audios
+2025-07-08 20:31:31 - FeatureExtractionRunner - INFO - Using raw transcript path: g:\Crime_Detection\Training\Processed_Data\Transcripts
+
+2025-07-08 20:31:31 - FeatureExtractionRunner - INFO - Initializing feature extractors (this may take a moment for model downloads)...
+2025-07-08 20:31:38 - FeatureExtractionRunner - INFO - All feature extractors initialized.
+2025-07-08 20:31:38 - FeatureExtractionRunner - INFO - Collecting raw video paths...
+2025-07-08 20:31:38 - FeatureExtractionRunner - INFO - Found 3950 raw video files to process.
+2025-07-08 20:31:38 - FeatureExtractionRunner - INFO - Starting feature extraction process...
+
+2025-07-08 20:31:38 - FeatureExtractionRunner - INFO -   Extracting video features for 1-1004\A.Beautiful.Mind.2001__#00-01-45_00-02-50_label_A...
