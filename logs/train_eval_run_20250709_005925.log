@@ -1,0 +1,60 @@
+2025-07-09 00:59:25 - TrainEvalRunner - INFO - STARTING MULTIMODAL CRIME DETECTION TRAINING AND EVALUATION
+2025-07-09 00:59:25 - TrainEvalRunner - INFO - Log file: g:\Crime_Detection\logs\train_eval_run_20250709_005925.log
+2025-07-09 00:59:25 - TrainEvalRunner - INFO - Running on device: cuda
+2025-07-09 00:59:25 - TrainEvalRunner - INFO - Random seed set to 42 for reproducibility.
+2025-07-09 00:59:25 - TrainEvalRunner - INFO - Collecting all video paths from raw_videos directory...
+2025-07-09 00:59:26 - TrainEvalRunner - INFO - Loading existing data splits from g:\Crime_Detection\data_splits\data_splits.json
+2025-07-09 00:59:26 - TrainEvalRunner - INFO - Initializing datasets and data loaders...
+2025-07-09 00:59:27 - TrainEvalRunner - INFO - Train dataset size: 2764
+2025-07-09 00:59:27 - TrainEvalRunner - INFO - Validation dataset size: 593
+2025-07-09 00:59:27 - TrainEvalRunner - INFO - Test dataset size: 593
+2025-07-09 00:59:28 - TrainEvalRunner - INFO - Models will be saved to: g:\Crime_Detection\models
+2025-07-09 00:59:28 - TrainEvalRunner - INFO - Checkpoint loaded from g:\Crime_Detection\models\best_model.pth (Epoch: 18, Loss: 0.1369)
+2025-07-09 00:59:28 - TrainEvalRunner - INFO - Resuming training from epoch 19 with best validation loss 0.1369
+2025-07-09 00:59:28 - TrainEvalRunner - INFO - Starting model training...
+2025-07-09 01:00:23 - TrainEvalRunner - INFO - Epoch 19 Training - Loss: 0.0661, Acc: 97.58%
+2025-07-09 01:01:15 - TrainEvalRunner - INFO - Validation Metrics - Loss: 0.1429, Acc: 94.27%, Prec: 0.9565, Rec: 0.9316, F1: 0.9439, AUC: 0.9880
+2025-07-09 01:01:15 - TrainEvalRunner - INFO - Early stopping patience: 1/10
+2025-07-09 01:01:15 - TrainEvalRunner - INFO - Checkpoint saved to g:\Crime_Detection\models\model_epoch_19.pth
+2025-07-09 01:02:08 - TrainEvalRunner - INFO - Epoch 20 Training - Loss: 0.0595, Acc: 97.87%
+2025-07-09 01:03:01 - TrainEvalRunner - INFO - Validation Metrics - Loss: 0.1573, Acc: 93.93%, Prec: 0.9721, Rec: 0.9088, F1: 0.9394, AUC: 0.9887
+2025-07-09 01:03:01 - TrainEvalRunner - INFO - Early stopping patience: 2/10
+2025-07-09 01:03:54 - TrainEvalRunner - INFO - Epoch 21 Training - Loss: 0.0623, Acc: 97.76%
+2025-07-09 01:04:45 - TrainEvalRunner - INFO - Validation Metrics - Loss: 0.1921, Acc: 93.25%, Prec: 0.9588, Rec: 0.9088, F1: 0.9331, AUC: 0.9831
+2025-07-09 01:04:45 - TrainEvalRunner - INFO - Early stopping patience: 3/10
+2025-07-09 01:05:39 - TrainEvalRunner - INFO - Epoch 22 Training - Loss: 0.0500, Acc: 98.23%
+2025-07-09 01:06:32 - TrainEvalRunner - INFO - Validation Metrics - Loss: 0.1652, Acc: 94.10%, Prec: 0.9722, Rec: 0.9121, F1: 0.9412, AUC: 0.9886
+2025-07-09 01:06:32 - TrainEvalRunner - INFO - Early stopping patience: 4/10
+2025-07-09 01:07:24 - TrainEvalRunner - INFO - Epoch 23 Training - Loss: 0.0480, Acc: 98.19%
+2025-07-09 01:08:17 - TrainEvalRunner - INFO - Validation Metrics - Loss: 0.1484, Acc: 94.60%, Prec: 0.9661, Rec: 0.9283, F1: 0.9468, AUC: 0.9877
+2025-07-09 01:08:17 - TrainEvalRunner - INFO - Early stopping patience: 5/10
+2025-07-09 01:09:11 - TrainEvalRunner - INFO - Epoch 24 Training - Loss: 0.0393, Acc: 98.70%
+2025-07-09 01:10:02 - TrainEvalRunner - INFO - Validation Metrics - Loss: 0.1478, Acc: 94.60%, Prec: 0.9479, Rec: 0.9479, F1: 0.9479, AUC: 0.9882
+2025-07-09 01:10:02 - TrainEvalRunner - INFO - Early stopping patience: 6/10
+2025-07-09 01:10:03 - TrainEvalRunner - INFO - Checkpoint saved to g:\Crime_Detection\models\model_epoch_24.pth
+2025-07-09 01:10:55 - TrainEvalRunner - INFO - Epoch 25 Training - Loss: 0.0420, Acc: 98.52%
+2025-07-09 01:11:48 - TrainEvalRunner - INFO - Validation Metrics - Loss: 0.1720, Acc: 93.76%, Prec: 0.9623, Rec: 0.9153, F1: 0.9382, AUC: 0.9866
+2025-07-09 01:11:48 - TrainEvalRunner - INFO - Early stopping patience: 7/10
+2025-07-09 01:13:23 - TrainEvalRunner - INFO - Epoch 26 Training - Loss: 0.0393, Acc: 98.88%
+2025-07-09 01:14:21 - TrainEvalRunner - INFO - Validation Metrics - Loss: 0.1661, Acc: 94.60%, Prec: 0.9758, Rec: 0.9186, F1: 0.9463, AUC: 0.9883
+2025-07-09 01:14:21 - TrainEvalRunner - INFO - Early stopping patience: 8/10
+2025-07-09 01:15:15 - TrainEvalRunner - INFO - Epoch 27 Training - Loss: 0.0372, Acc: 98.66%
+2025-07-09 01:16:12 - TrainEvalRunner - INFO - Validation Metrics - Loss: 0.1514, Acc: 94.10%, Prec: 0.9533, Rec: 0.9316, F1: 0.9423, AUC: 0.9881
+2025-07-09 01:16:12 - TrainEvalRunner - INFO - Early stopping patience: 9/10
+2025-07-09 01:17:05 - TrainEvalRunner - INFO - Epoch 28 Training - Loss: 0.0288, Acc: 99.20%
+2025-07-09 01:17:58 - TrainEvalRunner - INFO - Validation Metrics - Loss: 0.1502, Acc: 94.94%, Prec: 0.9511, Rec: 0.9511, F1: 0.9511, AUC: 0.9884
+2025-07-09 01:17:58 - TrainEvalRunner - INFO - Early stopping patience: 10/10
+2025-07-09 01:17:58 - TrainEvalRunner - INFO - Early stopping triggered after 29 epochs. No improvement in validation loss for 10 epochs.
+2025-07-09 01:17:58 - TrainEvalRunner - INFO - Training finished.
+2025-07-09 01:17:58 - TrainEvalRunner - INFO - Loading best model for final evaluation...
+2025-07-09 01:17:58 - TrainEvalRunner - INFO - Checkpoint loaded from g:\Crime_Detection\models\best_model.pth (Epoch: 18, Loss: 0.1369)
+2025-07-09 01:19:02 - TrainEvalRunner - INFO - Final Test Metrics - Loss: 0.1597, Acc: 95.28%, Prec: 0.9515, Rec: 0.9577, F1: 0.9545, AUC: 0.9854
+2025-07-09 01:19:03 - TrainEvalRunner - INFO - Final Test Set Metrics:
+2025-07-09 01:19:03 - TrainEvalRunner - INFO -   Loss: 0.1597
+2025-07-09 01:19:03 - TrainEvalRunner - INFO -   Accuracy: 95.28%
+2025-07-09 01:19:03 - TrainEvalRunner - INFO -   Precision: 0.9515
+2025-07-09 01:19:03 - TrainEvalRunner - INFO -   Recall: 0.9577
+2025-07-09 01:19:03 - TrainEvalRunner - INFO -   F1 Score: 0.9545
+2025-07-09 01:19:03 - TrainEvalRunner - INFO -   AUC Score: 0.9854
+2025-07-09 01:19:03 - TrainEvalRunner - INFO - ================================================================================
+2025-07-09 01:19:03 - TrainEvalRunner - INFO - TRAINING AND EVALUATION COMPLETE

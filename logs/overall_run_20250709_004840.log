@@ -1,0 +1,2 @@
+2025-07-09 00:48:40 - Process - WARNING - Failed to reconfigure console stream encoding to UTF-8: 'OutStream' object has no attribute 'buffer'. Output might show encoding errors.
+2025-07-09 00:48:40 - Process - INFO - Skipping direct execution of orchestrator in interactive environment. Use 'python main_orchestrator.py' or set RUN_ORCHESTRATOR_MAIN=1.
