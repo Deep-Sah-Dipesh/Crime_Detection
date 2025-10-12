@@ -1,0 +1,119 @@
+2025-10-12 16:34:01,677 - INFO - Loading dataset from CSV...
+2025-10-12 16:34:01,688 - INFO - Data loaded: 3358 training samples, 592 validation samples.
+2025-10-12 16:34:02,921 - INFO - --- Starting Training on cuda for 50 epochs ---
+2025-10-12 16:34:02,921 - INFO - Model architecture: 
+CrimeClassifier(
+  (network): Sequential(
+    (0): Linear(in_features=2304, out_features=512, bias=True)
+    (1): ReLU()
+    (2): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): Dropout(p=0.5, inplace=False)
+    (4): Linear(in_features=512, out_features=256, bias=True)
+    (5): ReLU()
+    (6): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (7): Dropout(p=0.5, inplace=False)
+    (8): Linear(in_features=256, out_features=7, bias=True)
+  )
+)
+2025-10-12 16:34:12,471 - INFO - Epoch [01/50], Train Loss: 0.6588, Val Loss: 0.5906
+2025-10-12 16:34:12,620 - INFO -   -> Val loss improved to 0.5906. Model saved.
+2025-10-12 16:34:22,456 - INFO - Epoch [02/50], Train Loss: 0.5954, Val Loss: 0.5413
+2025-10-12 16:34:22,483 - INFO -   -> Val loss improved to 0.5413. Model saved.
+2025-10-12 16:34:32,303 - INFO - Epoch [03/50], Train Loss: 0.5582, Val Loss: 0.5249
+2025-10-12 16:34:32,329 - INFO -   -> Val loss improved to 0.5249. Model saved.
+2025-10-12 16:34:42,187 - INFO - Epoch [04/50], Train Loss: 0.5337, Val Loss: 0.4797
+2025-10-12 16:34:42,218 - INFO -   -> Val loss improved to 0.4797. Model saved.
+2025-10-12 16:34:52,087 - INFO - Epoch [05/50], Train Loss: 0.5056, Val Loss: 0.4632
+2025-10-12 16:34:52,121 - INFO -   -> Val loss improved to 0.4632. Model saved.
+2025-10-12 16:35:01,881 - INFO - Epoch [06/50], Train Loss: 0.4816, Val Loss: 0.4424
+2025-10-12 16:35:01,908 - INFO -   -> Val loss improved to 0.4424. Model saved.
+2025-10-12 16:35:11,639 - INFO - Epoch [07/50], Train Loss: 0.4540, Val Loss: 0.4137
+2025-10-12 16:35:11,665 - INFO -   -> Val loss improved to 0.4137. Model saved.
+2025-10-12 16:35:21,451 - INFO - Epoch [08/50], Train Loss: 0.4232, Val Loss: 0.3889
+2025-10-12 16:35:21,478 - INFO -   -> Val loss improved to 0.3889. Model saved.
+2025-10-12 16:35:31,319 - INFO - Epoch [09/50], Train Loss: 0.3960, Val Loss: 0.3656
+2025-10-12 16:35:31,343 - INFO -   -> Val loss improved to 0.3656. Model saved.
+2025-10-12 16:35:41,127 - INFO - Epoch [10/50], Train Loss: 0.3694, Val Loss: 0.3212
+2025-10-12 16:35:41,159 - INFO -   -> Val loss improved to 0.3212. Model saved.
+2025-10-12 16:35:50,956 - INFO - Epoch [11/50], Train Loss: 0.3401, Val Loss: 0.3001
+2025-10-12 16:35:51,071 - INFO -   -> Val loss improved to 0.3001. Model saved.
+2025-10-12 16:36:00,920 - INFO - Epoch [12/50], Train Loss: 0.3049, Val Loss: 0.2762
+2025-10-12 16:36:00,948 - INFO -   -> Val loss improved to 0.2762. Model saved.
+2025-10-12 16:36:10,792 - INFO - Epoch [13/50], Train Loss: 0.2890, Val Loss: 0.2627
+2025-10-12 16:36:10,829 - INFO -   -> Val loss improved to 0.2627. Model saved.
+2025-10-12 16:36:20,651 - INFO - Epoch [14/50], Train Loss: 0.2578, Val Loss: 0.2265
+2025-10-12 16:36:20,675 - INFO -   -> Val loss improved to 0.2265. Model saved.
+2025-10-12 16:36:30,720 - INFO - Epoch [15/50], Train Loss: 0.2383, Val Loss: 0.2084
+2025-10-12 16:36:30,756 - INFO -   -> Val loss improved to 0.2084. Model saved.
+2025-10-12 16:36:40,788 - INFO - Epoch [16/50], Train Loss: 0.2166, Val Loss: 0.1927
+2025-10-12 16:36:40,854 - INFO -   -> Val loss improved to 0.1927. Model saved.
+2025-10-12 16:36:50,858 - INFO - Epoch [17/50], Train Loss: 0.1996, Val Loss: 0.1776
+2025-10-12 16:36:50,888 - INFO -   -> Val loss improved to 0.1776. Model saved.
+2025-10-12 16:37:00,704 - INFO - Epoch [18/50], Train Loss: 0.1880, Val Loss: 0.1748
+2025-10-12 16:37:00,738 - INFO -   -> Val loss improved to 0.1748. Model saved.
+2025-10-12 16:37:10,545 - INFO - Epoch [19/50], Train Loss: 0.1790, Val Loss: 0.1644
+2025-10-12 16:37:10,571 - INFO -   -> Val loss improved to 0.1644. Model saved.
+2025-10-12 16:37:20,356 - INFO - Epoch [20/50], Train Loss: 0.1701, Val Loss: 0.1475
+2025-10-12 16:37:20,392 - INFO -   -> Val loss improved to 0.1475. Model saved.
+2025-10-12 16:37:30,271 - INFO - Epoch [21/50], Train Loss: 0.1548, Val Loss: 0.1433
+2025-10-12 16:37:30,314 - INFO -   -> Val loss improved to 0.1433. Model saved.
+2025-10-12 16:37:40,104 - INFO - Epoch [22/50], Train Loss: 0.1481, Val Loss: 0.1440
+2025-10-12 16:37:40,104 - INFO -   -> Val loss did not improve. Patience: 1/10
+2025-10-12 16:37:49,904 - INFO - Epoch [23/50], Train Loss: 0.1405, Val Loss: 0.1331
+2025-10-12 16:37:49,937 - INFO -   -> Val loss improved to 0.1331. Model saved.
+2025-10-12 16:37:59,858 - INFO - Epoch [24/50], Train Loss: 0.1398, Val Loss: 0.1359
+2025-10-12 16:37:59,858 - INFO -   -> Val loss did not improve. Patience: 1/10
+2025-10-12 16:38:09,790 - INFO - Epoch [25/50], Train Loss: 0.1338, Val Loss: 0.1292
+2025-10-12 16:38:09,822 - INFO -   -> Val loss improved to 0.1292. Model saved.
+2025-10-12 16:38:19,676 - INFO - Epoch [26/50], Train Loss: 0.1290, Val Loss: 0.1300
+2025-10-12 16:38:19,676 - INFO -   -> Val loss did not improve. Patience: 1/10
+2025-10-12 16:38:29,525 - INFO - Epoch [27/50], Train Loss: 0.1266, Val Loss: 0.1253
+2025-10-12 16:38:29,556 - INFO -   -> Val loss improved to 0.1253. Model saved.
+2025-10-12 16:38:39,389 - INFO - Epoch [28/50], Train Loss: 0.1238, Val Loss: 0.1239
+2025-10-12 16:38:39,433 - INFO -   -> Val loss improved to 0.1239. Model saved.
+2025-10-12 16:38:49,256 - INFO - Epoch [29/50], Train Loss: 0.1149, Val Loss: 0.1235
+2025-10-12 16:38:49,300 - INFO -   -> Val loss improved to 0.1235. Model saved.
+2025-10-12 16:38:59,155 - INFO - Epoch [30/50], Train Loss: 0.1172, Val Loss: 0.1208
+2025-10-12 16:38:59,193 - INFO -   -> Val loss improved to 0.1208. Model saved.
+2025-10-12 16:39:09,069 - INFO - Epoch [31/50], Train Loss: 0.1116, Val Loss: 0.1185
+2025-10-12 16:39:09,108 - INFO -   -> Val loss improved to 0.1185. Model saved.
+2025-10-12 16:39:18,972 - INFO - Epoch [32/50], Train Loss: 0.1141, Val Loss: 0.1222
+2025-10-12 16:39:18,972 - INFO -   -> Val loss did not improve. Patience: 1/10
+2025-10-12 16:39:28,831 - INFO - Epoch [33/50], Train Loss: 0.1099, Val Loss: 0.1197
+2025-10-12 16:39:28,831 - INFO -   -> Val loss did not improve. Patience: 2/10
+2025-10-12 16:39:38,820 - INFO - Epoch [34/50], Train Loss: 0.1140, Val Loss: 0.1159
+2025-10-12 16:39:38,861 - INFO -   -> Val loss improved to 0.1159. Model saved.
+2025-10-12 16:39:48,821 - INFO - Epoch [35/50], Train Loss: 0.1041, Val Loss: 0.1149
+2025-10-12 16:39:48,855 - INFO -   -> Val loss improved to 0.1149. Model saved.
+2025-10-12 16:39:58,805 - INFO - Epoch [36/50], Train Loss: 0.1029, Val Loss: 0.1154
+2025-10-12 16:39:58,805 - INFO -   -> Val loss did not improve. Patience: 1/10
+2025-10-12 16:40:08,621 - INFO - Epoch [37/50], Train Loss: 0.1012, Val Loss: 0.1159
+2025-10-12 16:40:08,621 - INFO -   -> Val loss did not improve. Patience: 2/10
+2025-10-12 16:40:18,442 - INFO - Epoch [38/50], Train Loss: 0.0984, Val Loss: 0.1154
+2025-10-12 16:40:18,442 - INFO -   -> Val loss did not improve. Patience: 3/10
+2025-10-12 16:40:28,295 - INFO - Epoch [39/50], Train Loss: 0.0997, Val Loss: 0.1169
+2025-10-12 16:40:28,295 - INFO -   -> Val loss did not improve. Patience: 4/10
+2025-10-12 16:40:38,372 - INFO - Epoch [40/50], Train Loss: 0.0971, Val Loss: 0.1183
+2025-10-12 16:40:38,372 - INFO -   -> Val loss did not improve. Patience: 5/10
+2025-10-12 16:40:48,225 - INFO - Epoch [41/50], Train Loss: 0.0971, Val Loss: 0.1176
+2025-10-12 16:40:48,225 - INFO -   -> Val loss did not improve. Patience: 6/10
+2025-10-12 16:40:58,104 - INFO - Epoch [42/50], Train Loss: 0.0972, Val Loss: 0.1172
+2025-10-12 16:40:58,104 - INFO -   -> Val loss did not improve. Patience: 7/10
+2025-10-12 16:41:08,006 - INFO - Epoch [43/50], Train Loss: 0.0960, Val Loss: 0.1144
+2025-10-12 16:41:08,047 - INFO -   -> Val loss improved to 0.1144. Model saved.
+2025-10-12 16:41:17,898 - INFO - Epoch [44/50], Train Loss: 0.0944, Val Loss: 0.1173
+2025-10-12 16:41:17,898 - INFO -   -> Val loss did not improve. Patience: 1/10
+2025-10-12 16:41:27,722 - INFO - Epoch [45/50], Train Loss: 0.0946, Val Loss: 0.1198
+2025-10-12 16:41:27,722 - INFO -   -> Val loss did not improve. Patience: 2/10
+2025-10-12 16:41:37,597 - INFO - Epoch [46/50], Train Loss: 0.0912, Val Loss: 0.1160
+2025-10-12 16:41:37,597 - INFO -   -> Val loss did not improve. Patience: 3/10
+2025-10-12 16:41:47,441 - INFO - Epoch [47/50], Train Loss: 0.0925, Val Loss: 0.1119
+2025-10-12 16:41:47,475 - INFO -   -> Val loss improved to 0.1119. Model saved.
+2025-10-12 16:41:57,383 - INFO - Epoch [48/50], Train Loss: 0.0883, Val Loss: 0.1125
+2025-10-12 16:41:57,383 - INFO -   -> Val loss did not improve. Patience: 1/10
+2025-10-12 16:42:07,210 - INFO - Epoch [49/50], Train Loss: 0.0900, Val Loss: 0.1154
+2025-10-12 16:42:07,210 - INFO -   -> Val loss did not improve. Patience: 2/10
+2025-10-12 16:42:17,041 - INFO - Epoch [50/50], Train Loss: 0.0889, Val Loss: 0.1114
+2025-10-12 16:42:17,067 - INFO -   -> Val loss improved to 0.1114. Model saved.
+2025-10-12 16:42:17,067 - INFO - 
+--- Training Finished. Best model is saved at H:\Crime_Detection\crime_detection_model\best_model.pth ---

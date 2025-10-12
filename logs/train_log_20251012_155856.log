@@ -1,0 +1,19 @@
+2025-10-12 15:58:56,981 - INFO - Loading dataset from CSV...
+2025-10-12 15:58:56,993 - INFO - Data loaded: 3358 training samples, 592 validation samples.
+2025-10-12 15:58:58,175 - INFO - --- Starting Training on cuda for 50 epochs ---
+2025-10-12 15:58:58,175 - INFO - Model architecture: 
+CrimeClassifier(
+  (network): Sequential(
+    (0): Linear(in_features=2304, out_features=512, bias=True)
+    (1): ReLU()
+    (2): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): Dropout(p=0.5, inplace=False)
+    (4): Linear(in_features=512, out_features=256, bias=True)
+    (5): ReLU()
+    (6): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (7): Dropout(p=0.5, inplace=False)
+    (8): Linear(in_features=256, out_features=7, bias=True)
+  )
+)
+2025-10-12 16:03:20,256 - INFO - 
+--- Training Finished. Best model is saved at H:\Crime_Detection\models\best_model.pth ---
