@@ -1,0 +1,101 @@
+2025-10-13 03:58:44,372 - INFO - Log file for this run: H:\Crime_Detection\crime_detection_model\logs\batch_predict_log_20251013_035844.log
+2025-10-13 03:58:44,373 - INFO - Starting batch prediction on directory: H:\Crime_Detection\Testing\Videos
+2025-10-13 03:58:44,374 - INFO - Randomly selecting 15 videos to process from a total of 800.
+2025-10-13 03:58:44,376 - INFO - --- Processing: The.Fast.and.the.Furious.2001__#01-14-04_01-15-20_label_B1-0-0.mp4 ---
+2025-10-13 03:58:44,379 - INFO - -> Extracting new features...
+2025-10-13 03:59:12,183 - WARNING - From C:\Users\admin\anaconda3\envs\crime_gpu\lib\site-packages\tensorflow_hub\resolver.py:498: The name tf.gfile.Exists is deprecated. Please use tf.io.gfile.exists instead.
+
+2025-10-13 03:59:12,194 - WARNING - From C:\Users\admin\anaconda3\envs\crime_gpu\lib\site-packages\tensorflow_hub\module_v2.py:126: The name tf.saved_model.load_v2 is deprecated. Please use tf.compat.v2.saved_model.load instead.
+
+2025-10-13 03:59:14,993 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 03:59:14,993 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 03:59:15,607 - INFO -    (Features saved to cache for future runs)
+2025-10-13 03:59:15,649 - INFO - Successfully processed The.Fast.and.the.Furious.2001__#01-14-04_01-15-20_label_B1-0-0.mp4. Detections: Normal
+2025-10-13 03:59:15,649 - INFO - --- Processing: Operation.Red.Sea.2018__#0-29-36_0-30-20_label_B2-G-0.mp4 ---
+2025-10-13 03:59:15,649 - INFO - -> Extracting new features...
+2025-10-13 03:59:34,125 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 03:59:34,125 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 03:59:34,553 - INFO -    (Features saved to cache for future runs)
+2025-10-13 03:59:34,571 - INFO - Successfully processed Operation.Red.Sea.2018__#0-29-36_0-30-20_label_B2-G-0.mp4. Detections: Normal
+2025-10-13 03:59:34,571 - INFO - --- Processing: v=0vVOXlgHC1U__#00-12-00_00-18-00_label_A.mp4 ---
+2025-10-13 03:59:34,581 - INFO - -> Extracting new features...
+2025-10-13 04:01:43,711 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:01:43,711 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:01:44,927 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:01:44,951 - INFO - Successfully processed v=0vVOXlgHC1U__#00-12-00_00-18-00_label_A.mp4. Detections: Normal
+2025-10-13 04:01:44,952 - INFO - --- Processing: v=EOAfl8yMiN8__#00-03-00_00-04-09_label_B6-0-0.mp4 ---
+2025-10-13 04:01:44,952 - INFO - -> Extracting new features...
+2025-10-13 04:02:14,278 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:02:14,278 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:02:14,763 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:02:14,802 - INFO - Successfully processed v=EOAfl8yMiN8__#00-03-00_00-04-09_label_B6-0-0.mp4. Detections: Normal
+2025-10-13 04:02:14,802 - INFO - --- Processing: v=rJz4NXm6vis__#1_label_B4-0-0.mp4 ---
+2025-10-13 04:02:14,802 - INFO - -> Extracting new features...
+2025-10-13 04:02:46,757 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:02:46,758 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:02:47,268 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:02:47,296 - INFO - Successfully processed v=rJz4NXm6vis__#1_label_B4-0-0.mp4. Detections: Normal
+2025-10-13 04:02:47,296 - INFO - --- Processing: Lord.of.War__#01-41-04_01-41-53_label_B1-0-0.mp4 ---
+2025-10-13 04:02:47,296 - INFO - -> Extracting new features...
+2025-10-13 04:03:07,833 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:03:07,833 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:03:08,278 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:03:08,305 - INFO - Successfully processed Lord.of.War__#01-41-04_01-41-53_label_B1-0-0.mp4. Detections: Normal
+2025-10-13 04:03:08,306 - INFO - --- Processing: v=f6j3YWgVBto__#00-06-16_00-06-51_label_B6-0-0.mp4 ---
+2025-10-13 04:03:08,323 - INFO - Successfully processed v=f6j3YWgVBto__#00-06-16_00-06-51_label_B6-0-0.mp4. Detections: Explosion
+2025-10-13 04:03:08,323 - INFO - --- Processing: Fury.2014__#00-39-36_00-40-44_label_B1-B2-0.mp4 ---
+2025-10-13 04:03:08,332 - INFO - -> Extracting new features...
+2025-10-13 04:03:35,456 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:03:35,456 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:03:35,950 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:03:35,973 - INFO - Successfully processed Fury.2014__#00-39-36_00-40-44_label_B1-B2-0.mp4. Detections: Normal
+2025-10-13 04:03:35,981 - INFO - --- Processing: v=2jwO15SMyuo__#1_label_B4-0-0.mp4 ---
+2025-10-13 04:03:35,998 - INFO - -> Extracting new features...
+2025-10-13 04:04:14,139 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:04:14,139 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:04:14,592 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:04:14,607 - INFO - Successfully processed v=2jwO15SMyuo__#1_label_B4-0-0.mp4. Detections: Normal
+2025-10-13 04:04:14,607 - INFO - --- Processing: IP.Man.2.2010__#00-02-50_00-06-45_label_A.mp4 ---
+2025-10-13 04:04:14,640 - INFO - -> Extracting new features...
+2025-10-13 04:05:44,266 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:05:44,266 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:05:45,338 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:05:45,352 - INFO - Successfully processed IP.Man.2.2010__#00-02-50_00-06-45_label_A.mp4. Detections: Normal
+2025-10-13 04:05:45,352 - INFO - --- Processing: Shoot.Em.Up.2007__#00-25-50_00-27-10_label_A.mp4 ---
+2025-10-13 04:05:45,391 - INFO - -> Extracting new features...
+2025-10-13 04:06:16,861 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:06:16,861 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:06:17,423 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:06:17,453 - INFO - Successfully processed Shoot.Em.Up.2007__#00-25-50_00-27-10_label_A.mp4. Detections: Normal
+2025-10-13 04:06:17,453 - INFO - --- Processing: v=bDm2-1NZBLw__#1_label_B4-0-0.mp4 ---
+2025-10-13 04:06:17,471 - INFO - -> Extracting new features...
+2025-10-13 04:06:53,897 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:06:53,897 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:06:54,439 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:06:54,467 - INFO - Successfully processed v=bDm2-1NZBLw__#1_label_B4-0-0.mp4. Detections: Normal
+2025-10-13 04:06:54,467 - INFO - --- Processing: v=BzwNU2xmT64__#00-04-10_00-06-09_label_B6-0-0.mp4 ---
+2025-10-13 04:06:54,498 - INFO - -> Extracting new features...
+2025-10-13 04:07:40,399 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:07:40,399 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:07:40,985 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:07:41,010 - INFO - Successfully processed v=BzwNU2xmT64__#00-04-10_00-06-09_label_B6-0-0.mp4. Detections: Normal
+2025-10-13 04:07:41,010 - INFO - --- Processing: v=73uRcX0Dvfc__#00-00-00_00-01-51_label_B6-G-0.mp4 ---
+2025-10-13 04:07:41,011 - INFO - -> Extracting new features...
+2025-10-13 04:08:27,001 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:08:27,001 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:08:27,567 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:08:27,593 - INFO - Successfully processed v=73uRcX0Dvfc__#00-00-00_00-01-51_label_B6-G-0.mp4. Detections: Normal
+2025-10-13 04:08:27,594 - INFO - --- Processing: v=rJgg00ic1G8__#1_label_A.mp4 ---
+2025-10-13 04:08:27,595 - INFO - -> Extracting new features...
+2025-10-13 04:09:55,263 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:09:55,263 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:09:56,205 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:09:56,238 - INFO - Successfully processed v=rJgg00ic1G8__#1_label_A.mp4. Detections: Normal
+2025-10-13 04:09:56,271 - INFO - 
+--- Sample of Predictions ---
+                                                             filename detected_crimes confidences
+0  The.Fast.and.the.Furious.2001__#01-14-04_01-15-20_label_B1-0-0.mp4          Normal       0.04%
+1           Operation.Red.Sea.2018__#0-29-36_0-30-20_label_B2-G-0.mp4          Normal       0.05%
+2                       v=0vVOXlgHC1U__#00-12-00_00-18-00_label_A.mp4          Normal       3.10%
+3                  v=EOAfl8yMiN8__#00-03-00_00-04-09_label_B6-0-0.mp4          Normal       6.61%
+4                                  v=rJz4NXm6vis__#1_label_B4-0-0.mp4          Normal      18.04%

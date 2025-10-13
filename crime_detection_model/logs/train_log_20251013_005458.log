@@ -1,0 +1,160 @@
+2025-10-13 00:54:58,897 - INFO - Loading dataset...
+2025-10-13 00:54:58,906 - INFO - Data loaded: 3358 training, 592 validation samples.
+2025-10-13 00:55:00,158 - INFO - --- Starting Training on cuda for 100 epochs ---
+2025-10-13 00:55:09,652 - INFO - Epoch [01/100], Train Loss: 0.7119, Val Loss: 0.6227
+2025-10-13 00:55:09,652 - INFO -   -> Val loss improved to 0.6227. Managing saved models.
+2025-10-13 00:55:19,184 - INFO - Epoch [02/100], Train Loss: 0.6580, Val Loss: 0.5879
+2025-10-13 00:55:19,184 - INFO -   -> Val loss improved to 0.5879. Managing saved models.
+2025-10-13 00:55:28,804 - INFO - Epoch [03/100], Train Loss: 0.6197, Val Loss: 0.5679
+2025-10-13 00:55:28,804 - INFO -   -> Val loss improved to 0.5679. Managing saved models.
+2025-10-13 00:55:38,620 - INFO - Epoch [04/100], Train Loss: 0.5982, Val Loss: 0.5399
+2025-10-13 00:55:38,620 - INFO -   -> Val loss improved to 0.5399. Managing saved models.
+2025-10-13 00:55:48,449 - INFO - Epoch [05/100], Train Loss: 0.5782, Val Loss: 0.5109
+2025-10-13 00:55:48,449 - INFO -   -> Val loss improved to 0.5109. Managing saved models.
+2025-10-13 00:55:58,257 - INFO - Epoch [06/100], Train Loss: 0.5553, Val Loss: 0.4906
+2025-10-13 00:55:58,258 - INFO -   -> Val loss improved to 0.4906. Managing saved models.
+2025-10-13 00:56:07,968 - INFO - Epoch [07/100], Train Loss: 0.5344, Val Loss: 0.4910
+2025-10-13 00:56:07,968 - INFO -   -> Val loss improved to 0.4910. Managing saved models.
+2025-10-13 00:56:17,700 - INFO - Epoch [08/100], Train Loss: 0.5197, Val Loss: 0.4773
+2025-10-13 00:56:17,700 - INFO -   -> Val loss improved to 0.4773. Managing saved models.
+2025-10-13 00:56:27,399 - INFO - Epoch [09/100], Train Loss: 0.4973, Val Loss: 0.4441
+2025-10-13 00:56:27,399 - INFO -   -> Val loss improved to 0.4441. Managing saved models.
+2025-10-13 00:56:37,096 - INFO - Epoch [10/100], Train Loss: 0.4777, Val Loss: 0.4285
+2025-10-13 00:56:37,096 - INFO -   -> Val loss improved to 0.4285. Managing saved models.
+2025-10-13 00:56:46,734 - INFO - Epoch [11/100], Train Loss: 0.4627, Val Loss: 0.4053
+2025-10-13 00:56:46,734 - INFO -   -> Val loss improved to 0.4053. Managing saved models.
+2025-10-13 00:56:56,320 - INFO - Epoch [12/100], Train Loss: 0.4354, Val Loss: 0.3826
+2025-10-13 00:56:56,320 - INFO -   -> Val loss improved to 0.3826. Managing saved models.
+2025-10-13 00:57:05,886 - INFO - Epoch [13/100], Train Loss: 0.4215, Val Loss: 0.3586
+2025-10-13 00:57:05,886 - INFO -   -> Val loss improved to 0.3586. Managing saved models.
+2025-10-13 00:57:15,451 - INFO - Epoch [14/100], Train Loss: 0.3995, Val Loss: 0.3435
+2025-10-13 00:57:15,451 - INFO -   -> Val loss improved to 0.3435. Managing saved models.
+2025-10-13 00:57:24,968 - INFO - Epoch [15/100], Train Loss: 0.3796, Val Loss: 0.3162
+2025-10-13 00:57:24,968 - INFO -   -> Val loss improved to 0.3162. Managing saved models.
+2025-10-13 00:57:34,518 - INFO - Epoch [16/100], Train Loss: 0.3559, Val Loss: 0.3037
+2025-10-13 00:57:34,518 - INFO -   -> Val loss improved to 0.3037. Managing saved models.
+2025-10-13 00:57:44,084 - INFO - Epoch [17/100], Train Loss: 0.3359, Val Loss: 0.2740
+2025-10-13 00:57:44,084 - INFO -   -> Val loss improved to 0.2740. Managing saved models.
+2025-10-13 00:57:53,667 - INFO - Epoch [18/100], Train Loss: 0.3159, Val Loss: 0.2678
+2025-10-13 00:57:53,667 - INFO -   -> Val loss improved to 0.2678. Managing saved models.
+2025-10-13 00:58:03,204 - INFO - Epoch [19/100], Train Loss: 0.3038, Val Loss: 0.2399
+2025-10-13 00:58:03,215 - INFO -   -> Val loss improved to 0.2399. Managing saved models.
+2025-10-13 00:58:12,651 - INFO - Epoch [20/100], Train Loss: 0.2834, Val Loss: 0.2370
+2025-10-13 00:58:12,651 - INFO -   -> Val loss improved to 0.2370. Managing saved models.
+2025-10-13 00:58:22,101 - INFO - Epoch [21/100], Train Loss: 0.2709, Val Loss: 0.2155
+2025-10-13 00:58:22,101 - INFO -   -> Val loss improved to 0.2155. Managing saved models.
+2025-10-13 00:58:31,559 - INFO - Epoch [22/100], Train Loss: 0.2609, Val Loss: 0.2035
+2025-10-13 00:58:31,559 - INFO -   -> Val loss improved to 0.2035. Managing saved models.
+2025-10-13 00:58:41,236 - INFO - Epoch [23/100], Train Loss: 0.2407, Val Loss: 0.1938
+2025-10-13 00:58:41,236 - INFO -   -> Val loss improved to 0.1938. Managing saved models.
+2025-10-13 00:58:50,920 - INFO - Epoch [24/100], Train Loss: 0.2289, Val Loss: 0.1806
+2025-10-13 00:58:50,920 - INFO -   -> Val loss improved to 0.1806. Managing saved models.
+2025-10-13 00:59:00,540 - INFO - Epoch [25/100], Train Loss: 0.2232, Val Loss: 0.1742
+2025-10-13 00:59:00,540 - INFO -   -> Val loss improved to 0.1742. Managing saved models.
+2025-10-13 00:59:10,136 - INFO - Epoch [26/100], Train Loss: 0.2142, Val Loss: 0.1679
+2025-10-13 00:59:10,136 - INFO -   -> Val loss improved to 0.1679. Managing saved models.
+2025-10-13 00:59:19,751 - INFO - Epoch [27/100], Train Loss: 0.2022, Val Loss: 0.1607
+2025-10-13 00:59:19,752 - INFO -   -> Val loss improved to 0.1607. Managing saved models.
+2025-10-13 00:59:29,217 - INFO - Epoch [28/100], Train Loss: 0.2017, Val Loss: 0.1562
+2025-10-13 00:59:29,228 - INFO -   -> Val loss improved to 0.1562. Managing saved models.
+2025-10-13 00:59:38,687 - INFO - Epoch [29/100], Train Loss: 0.1895, Val Loss: 0.1552
+2025-10-13 00:59:38,687 - INFO -   -> Val loss improved to 0.1552. Managing saved models.
+2025-10-13 00:59:48,201 - INFO - Epoch [30/100], Train Loss: 0.1818, Val Loss: 0.1445
+2025-10-13 00:59:48,201 - INFO -   -> Val loss improved to 0.1445. Managing saved models.
+2025-10-13 00:59:57,817 - INFO - Epoch [31/100], Train Loss: 0.1822, Val Loss: 0.1444
+2025-10-13 00:59:57,817 - INFO -   -> Val loss improved to 0.1444. Managing saved models.
+2025-10-13 01:00:07,385 - INFO - Epoch [32/100], Train Loss: 0.1736, Val Loss: 0.1411
+2025-10-13 01:00:07,385 - INFO -   -> Val loss improved to 0.1411. Managing saved models.
+2025-10-13 01:00:16,920 - INFO - Epoch [33/100], Train Loss: 0.1683, Val Loss: 0.1378
+2025-10-13 01:00:16,920 - INFO -   -> Val loss improved to 0.1378. Managing saved models.
+2025-10-13 01:00:26,484 - INFO - Epoch [34/100], Train Loss: 0.1735, Val Loss: 0.1346
+2025-10-13 01:00:26,484 - INFO -   -> Val loss improved to 0.1346. Managing saved models.
+2025-10-13 01:00:36,018 - INFO - Epoch [35/100], Train Loss: 0.1667, Val Loss: 0.1346
+2025-10-13 01:00:36,018 - INFO -   -> Val loss improved to 0.1346. Managing saved models.
+2025-10-13 01:00:45,620 - INFO - Epoch [36/100], Train Loss: 0.1644, Val Loss: 0.1301
+2025-10-13 01:00:45,620 - INFO -   -> Val loss improved to 0.1301. Managing saved models.
+2025-10-13 01:00:55,185 - INFO - Epoch [37/100], Train Loss: 0.1580, Val Loss: 0.1257
+2025-10-13 01:00:55,185 - INFO -   -> Val loss improved to 0.1257. Managing saved models.
+2025-10-13 01:01:04,736 - INFO - Epoch [38/100], Train Loss: 0.1553, Val Loss: 0.1244
+2025-10-13 01:01:04,736 - INFO -   -> Val loss improved to 0.1244. Managing saved models.
+2025-10-13 01:01:14,320 - INFO - Epoch [39/100], Train Loss: 0.1565, Val Loss: 0.1235
+2025-10-13 01:01:14,320 - INFO -   -> Val loss improved to 0.1235. Managing saved models.
+2025-10-13 01:01:23,906 - INFO - Epoch [40/100], Train Loss: 0.1533, Val Loss: 0.1244
+2025-10-13 01:01:23,906 - INFO -   -> Val loss improved to 0.1244. Managing saved models.
+2025-10-13 01:01:33,620 - INFO - Epoch [41/100], Train Loss: 0.1477, Val Loss: 0.1223
+2025-10-13 01:01:33,620 - INFO -   -> Val loss improved to 0.1223. Managing saved models.
+2025-10-13 01:01:43,288 - INFO - Epoch [42/100], Train Loss: 0.1444, Val Loss: 0.1213
+2025-10-13 01:01:43,288 - INFO -   -> Val loss improved to 0.1213. Managing saved models.
+2025-10-13 01:01:53,174 - INFO - Epoch [43/100], Train Loss: 0.1427, Val Loss: 0.1175
+2025-10-13 01:01:53,174 - INFO -   -> Val loss improved to 0.1175. Managing saved models.
+2025-10-13 01:02:12,383 - INFO - Epoch [44/100], Train Loss: 0.1411, Val Loss: 0.1163
+2025-10-13 01:02:12,383 - INFO -   -> Val loss improved to 0.1163. Managing saved models.
+2025-10-13 01:02:22,268 - INFO - Epoch [45/100], Train Loss: 0.1393, Val Loss: 0.1170
+2025-10-13 01:02:22,268 - INFO -   -> Val loss improved to 0.1170. Managing saved models.
+2025-10-13 01:02:31,905 - INFO - Epoch [46/100], Train Loss: 0.1399, Val Loss: 0.1171
+2025-10-13 01:02:31,905 - INFO -   -> Val loss improved to 0.1171. Managing saved models.
+2025-10-13 01:02:41,503 - INFO - Epoch [47/100], Train Loss: 0.1382, Val Loss: 0.1150
+2025-10-13 01:02:41,503 - INFO -   -> Val loss improved to 0.1150. Managing saved models.
+2025-10-13 01:02:51,085 - INFO - Epoch [48/100], Train Loss: 0.1327, Val Loss: 0.1149
+2025-10-13 01:02:51,085 - INFO -   -> Val loss improved to 0.1149. Managing saved models.
+2025-10-13 01:03:00,685 - INFO - Epoch [49/100], Train Loss: 0.1296, Val Loss: 0.1154
+2025-10-13 01:03:00,685 - INFO -   -> Val loss improved to 0.1154. Managing saved models.
+2025-10-13 01:03:10,284 - INFO - Epoch [50/100], Train Loss: 0.1354, Val Loss: 0.1131
+2025-10-13 01:03:10,284 - INFO -   -> Val loss improved to 0.1131. Managing saved models.
+2025-10-13 01:03:19,901 - INFO - Epoch [51/100], Train Loss: 0.1325, Val Loss: 0.1144
+2025-10-13 01:03:19,901 - INFO -   -> Val loss improved to 0.1144. Managing saved models.
+2025-10-13 01:03:29,468 - INFO - Epoch [52/100], Train Loss: 0.1248, Val Loss: 0.1144
+2025-10-13 01:03:29,468 - INFO -   -> Val loss improved to 0.1144. Managing saved models.
+2025-10-13 01:03:39,054 - INFO - Epoch [53/100], Train Loss: 0.1228, Val Loss: 0.1142
+2025-10-13 01:03:39,054 - INFO -   -> Val loss improved to 0.1142. Managing saved models.
+2025-10-13 01:03:48,635 - INFO - Epoch [54/100], Train Loss: 0.1273, Val Loss: 0.1151
+2025-10-13 01:03:48,635 - INFO -   -> Val loss did not improve. Patience: 1/5
+2025-10-13 01:03:58,138 - INFO - Epoch [55/100], Train Loss: 0.1203, Val Loss: 0.1115
+2025-10-13 01:03:58,138 - INFO -   -> Val loss improved to 0.1115. Managing saved models.
+2025-10-13 01:04:07,765 - INFO - Epoch [56/100], Train Loss: 0.1172, Val Loss: 0.1111
+2025-10-13 01:04:07,767 - INFO -   -> Val loss improved to 0.1111. Managing saved models.
+2025-10-13 01:04:17,348 - INFO - Epoch [57/100], Train Loss: 0.1150, Val Loss: 0.1113
+2025-10-13 01:04:17,348 - INFO -   -> Val loss improved to 0.1113. Managing saved models.
+2025-10-13 01:04:26,897 - INFO - Epoch [58/100], Train Loss: 0.1135, Val Loss: 0.1101
+2025-10-13 01:04:26,897 - INFO -   -> Val loss improved to 0.1101. Managing saved models.
+2025-10-13 01:04:36,429 - INFO - Epoch [59/100], Train Loss: 0.1148, Val Loss: 0.1090
+2025-10-13 01:04:36,429 - INFO -   -> Val loss improved to 0.1090. Managing saved models.
+2025-10-13 01:04:46,028 - INFO - Epoch [60/100], Train Loss: 0.1150, Val Loss: 0.1092
+2025-10-13 01:04:46,028 - INFO -   -> Val loss improved to 0.1092. Managing saved models.
+2025-10-13 01:04:55,752 - INFO - Epoch [61/100], Train Loss: 0.1150, Val Loss: 0.1088
+2025-10-13 01:04:55,752 - INFO -   -> Val loss improved to 0.1088. Managing saved models.
+2025-10-13 01:05:05,450 - INFO - Epoch [62/100], Train Loss: 0.1122, Val Loss: 0.1112
+2025-10-13 01:05:05,450 - INFO -   -> Val loss did not improve. Patience: 1/5
+2025-10-13 01:05:15,019 - INFO - Epoch [63/100], Train Loss: 0.1116, Val Loss: 0.1094
+2025-10-13 01:05:15,019 - INFO -   -> Val loss did not improve. Patience: 2/5
+2025-10-13 01:05:24,415 - INFO - Epoch [64/100], Train Loss: 0.1101, Val Loss: 0.1098
+2025-10-13 01:05:24,415 - INFO -   -> Val loss did not improve. Patience: 3/5
+2025-10-13 01:05:33,886 - INFO - Epoch [65/100], Train Loss: 0.1104, Val Loss: 0.1088
+2025-10-13 01:05:33,886 - INFO -   -> Val loss improved to 0.1088. Managing saved models.
+2025-10-13 01:05:43,453 - INFO - Epoch [66/100], Train Loss: 0.1110, Val Loss: 0.1097
+2025-10-13 01:05:43,453 - INFO -   -> Val loss did not improve. Patience: 1/5
+2025-10-13 01:05:52,953 - INFO - Epoch [67/100], Train Loss: 0.1076, Val Loss: 0.1096
+2025-10-13 01:05:52,965 - INFO -   -> Val loss did not improve. Patience: 2/5
+2025-10-13 01:06:02,465 - INFO - Epoch [68/100], Train Loss: 0.1069, Val Loss: 0.1085
+2025-10-13 01:06:02,465 - INFO -   -> Val loss improved to 0.1085. Managing saved models.
+2025-10-13 01:06:11,985 - INFO - Epoch [69/100], Train Loss: 0.1078, Val Loss: 0.1089
+2025-10-13 01:06:11,985 - INFO -   -> Val loss did not improve. Patience: 1/5
+2025-10-13 01:06:21,474 - INFO - Epoch [70/100], Train Loss: 0.1104, Val Loss: 0.1084
+2025-10-13 01:06:21,474 - INFO -   -> Val loss improved to 0.1084. Managing saved models.
+2025-10-13 01:06:31,051 - INFO - Epoch [71/100], Train Loss: 0.1090, Val Loss: 0.1084
+2025-10-13 01:06:31,051 - INFO -   -> Val loss improved to 0.1084. Managing saved models.
+2025-10-13 01:06:40,652 - INFO - Epoch [72/100], Train Loss: 0.1130, Val Loss: 0.1097
+2025-10-13 01:06:40,652 - INFO -   -> Val loss did not improve. Patience: 1/5
+2025-10-13 01:06:50,170 - INFO - Epoch [73/100], Train Loss: 0.1093, Val Loss: 0.1090
+2025-10-13 01:06:50,170 - INFO -   -> Val loss did not improve. Patience: 2/5
+2025-10-13 01:06:59,703 - INFO - Epoch [74/100], Train Loss: 0.1077, Val Loss: 0.1088
+2025-10-13 01:06:59,703 - INFO -   -> Val loss did not improve. Patience: 3/5
+2025-10-13 01:07:09,184 - INFO - Epoch [75/100], Train Loss: 0.1082, Val Loss: 0.1096
+2025-10-13 01:07:09,184 - INFO -   -> Val loss did not improve. Patience: 4/5
+2025-10-13 01:07:18,771 - INFO - Epoch [76/100], Train Loss: 0.1109, Val Loss: 0.1097
+2025-10-13 01:07:18,771 - INFO -   -> Val loss did not improve. Patience: 5/5
+2025-10-13 01:07:18,771 - INFO - --- Early stopping triggered. ---
+2025-10-13 01:07:18,771 - INFO - Saved Rank 1 model as best_model.pth (Val Loss: 0.1084, Train Loss: 0.1090)
+2025-10-13 01:07:18,818 - INFO - Saved Rank 2 model as best_model_2.pth (Val Loss: 0.1084, Train Loss: 0.1104)
+2025-10-13 01:07:18,822 - INFO - Saved Rank 3 model as best_model_3.pth (Val Loss: 0.1085, Train Loss: 0.1069)
+2025-10-13 01:07:18,822 - INFO - --- Training Finished. Best models saved in H:\Crime_Detection\crime_detection_model\generated_models ---

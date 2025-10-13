@@ -1,0 +1,3 @@
+Module: https://tfhub.dev/google/yamnet/1
+Download Time: 2025-10-12 23:10:31.535064
+Downloader Hostname: DESKTOP-PCKT825 (PID:42388)

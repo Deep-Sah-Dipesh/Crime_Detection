@@ -1,0 +1,10 @@
+2025-10-13 01:39:43,123 - INFO - Log file for this run: H:\Crime_Detection\crime_detection_model\logs\batch_predict_log_20251013_013943.log
+2025-10-13 01:39:43,123 - INFO - Starting batch prediction on directory: H:\Crime_Detection\Testing\Videos
+2025-10-13 01:41:09,726 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 01:41:09,726 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 01:41:38,572 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 01:41:38,572 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 01:43:28,133 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 01:43:28,133 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 01:44:24,236 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 01:44:24,236 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.

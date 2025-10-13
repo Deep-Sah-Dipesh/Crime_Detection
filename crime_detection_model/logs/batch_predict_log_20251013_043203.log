@@ -1,0 +1,103 @@
+2025-10-13 04:32:03,137 - INFO - Log file for this run: H:\Crime_Detection\crime_detection_model\logs\batch_predict_log_20251013_043203.log
+2025-10-13 04:32:03,138 - INFO - Starting batch prediction on directory: H:\Crime_Detection\Testing\Videos
+2025-10-13 04:32:03,140 - INFO - Processing all 800 videos found.
+2025-10-13 04:32:03,142 - INFO - --- Processing: A.Beautiful.Mind.2001__#00-25-20_00-29-20_label_A.mp4 ---
+2025-10-13 04:32:03,330 - INFO - Successfully processed A.Beautiful.Mind.2001__#00-25-20_00-29-20_label_A.mp4. Detections: Normal
+2025-10-13 04:32:03,332 - INFO - --- Processing: A.Beautiful.Mind.2001__#00-40-52_00-42-01_label_A.mp4 ---
+2025-10-13 04:32:03,336 - INFO - Successfully processed A.Beautiful.Mind.2001__#00-40-52_00-42-01_label_A.mp4. Detections: Normal
+2025-10-13 04:32:03,336 - INFO - --- Processing: A.Beautiful.Mind.2001__#00-50-26_00-55-16_label_A.mp4 ---
+2025-10-13 04:32:03,372 - INFO - Successfully processed A.Beautiful.Mind.2001__#00-50-26_00-55-16_label_A.mp4. Detections: Normal
+2025-10-13 04:32:03,373 - INFO - --- Processing: A.Beautiful.Mind.2001__#01-14-30_01-16-59_label_A.mp4 ---
+2025-10-13 04:32:03,391 - INFO - Successfully processed A.Beautiful.Mind.2001__#01-14-30_01-16-59_label_A.mp4. Detections: Normal
+2025-10-13 04:32:03,392 - INFO - --- Processing: About.Time.2013__#00-23-50_00-24-31_label_A.mp4 ---
+2025-10-13 04:32:03,409 - INFO - Successfully processed About.Time.2013__#00-23-50_00-24-31_label_A.mp4. Detections: Normal
+2025-10-13 04:32:03,410 - INFO - --- Processing: About.Time.2013__#00-30-50_00-32-31_label_A.mp4 ---
+2025-10-13 04:32:03,430 - INFO - Successfully processed About.Time.2013__#00-30-50_00-32-31_label_A.mp4. Detections: Normal
+2025-10-13 04:32:03,430 - INFO - --- Processing: About.Time.2013__#00-40-52_00-42-31_label_A.mp4 ---
+2025-10-13 04:32:03,450 - INFO - Successfully processed About.Time.2013__#00-40-52_00-42-31_label_A.mp4. Detections: Normal
+2025-10-13 04:32:03,450 - INFO - --- Processing: Bad.Boys.1995__#00-10-00_00-11-52_label_A.mp4 ---
+2025-10-13 04:32:03,473 - INFO - Successfully processed Bad.Boys.1995__#00-10-00_00-11-52_label_A.mp4. Detections: Normal
+2025-10-13 04:32:03,473 - INFO - --- Processing: Bad.Boys.1995__#01-11-55_01-12-40_label_G-B2-B6.mp4 ---
+2025-10-13 04:32:03,491 - INFO - Successfully processed Bad.Boys.1995__#01-11-55_01-12-40_label_G-B2-B6.mp4. Detections: Explosion
+2025-10-13 04:32:03,492 - INFO - --- Processing: Bad.Boys.1995__#01-33-51_01-34-37_label_B2-0-0.mp4 ---
+2025-10-13 04:32:03,513 - INFO - Successfully processed Bad.Boys.1995__#01-33-51_01-34-37_label_B2-0-0.mp4. Detections: Shooting; Explosion
+2025-10-13 04:32:03,514 - INFO - --- Processing: Bad.Boys.II.2003__#00-06-42_00-10-00_label_B2-G-0.mp4 ---
+2025-10-13 04:32:03,532 - INFO - Successfully processed Bad.Boys.II.2003__#00-06-42_00-10-00_label_B2-G-0.mp4. Detections: Explosion
+2025-10-13 04:32:03,532 - INFO - --- Processing: Bad.Boys.II.2003__#01-11-16_01-14-00_label_A.mp4 ---
+2025-10-13 04:32:03,553 - INFO - Successfully processed Bad.Boys.II.2003__#01-11-16_01-14-00_label_A.mp4. Detections: Normal
+2025-10-13 04:32:03,553 - INFO - --- Processing: Be.with.You.2018__#00-04-20_00-05-35_label_A.mp4 ---
+2025-10-13 04:32:03,573 - INFO - Successfully processed Be.with.You.2018__#00-04-20_00-05-35_label_A.mp4. Detections: Normal
+2025-10-13 04:32:03,575 - INFO - --- Processing: Be.with.You.2018__#00-16-18_00-18-09_label_A.mp4 ---
+2025-10-13 04:32:03,593 - INFO - Successfully processed Be.with.You.2018__#00-16-18_00-18-09_label_A.mp4. Detections: Fighting
+2025-10-13 04:32:03,594 - INFO - --- Processing: Be.with.You.2018__#00-23-50_00-24-31_label_A.mp4 ---
+2025-10-13 04:32:03,614 - INFO - Successfully processed Be.with.You.2018__#00-23-50_00-24-31_label_A.mp4. Detections: Normal
+2025-10-13 04:32:03,614 - INFO - --- Processing: Be.with.You.2018__#01-14-30_01-16-59_label_A.mp4 ---
+2025-10-13 04:32:03,634 - INFO - Successfully processed Be.with.You.2018__#01-14-30_01-16-59_label_A.mp4. Detections: Normal
+2025-10-13 04:32:03,634 - INFO - --- Processing: Be.with.You.2018__#01-42-06_01-45-53_label_A.mp4 ---
+2025-10-13 04:32:03,636 - INFO - -> Extracting new features...
+2025-10-13 04:33:22,318 - WARNING - From C:\Users\admin\anaconda3\envs\crime_gpu\lib\site-packages\tensorflow_hub\resolver.py:498: The name tf.gfile.Exists is deprecated. Please use tf.io.gfile.exists instead.
+
+2025-10-13 04:33:22,323 - WARNING - From C:\Users\admin\anaconda3\envs\crime_gpu\lib\site-packages\tensorflow_hub\module_v2.py:126: The name tf.saved_model.load_v2 is deprecated. Please use tf.compat.v2.saved_model.load instead.
+
+2025-10-13 04:33:25,051 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:33:25,051 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:33:26,131 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:33:26,171 - INFO - Successfully processed Be.with.You.2018__#01-42-06_01-45-53_label_A.mp4. Detections: Normal
+2025-10-13 04:33:26,171 - INFO - --- Processing: Before.Sunrise.1995__#00-03-00_00-04-05_label_A.mp4 ---
+2025-10-13 04:33:26,172 - INFO - -> Extracting new features...
+2025-10-13 04:33:52,232 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:33:52,232 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:33:52,726 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:33:52,766 - INFO - Successfully processed Before.Sunrise.1995__#00-03-00_00-04-05_label_A.mp4. Detections: Normal
+2025-10-13 04:33:52,766 - INFO - --- Processing: Before.Sunrise.1995__#00-04-20_00-05-35_label_A.mp4 ---
+2025-10-13 04:33:52,841 - INFO - -> Extracting new features...
+2025-10-13 04:34:22,468 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:34:22,473 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:34:22,990 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:34:23,029 - INFO - Successfully processed Before.Sunrise.1995__#00-04-20_00-05-35_label_A.mp4. Detections: Normal
+2025-10-13 04:34:23,035 - INFO - --- Processing: Before.Sunrise.1995__#00-23-50_00-24-31_label_A.mp4 ---
+2025-10-13 04:34:23,037 - INFO - -> Extracting new features...
+2025-10-13 04:34:41,529 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:34:41,529 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:34:41,947 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:34:41,972 - INFO - Successfully processed Before.Sunrise.1995__#00-23-50_00-24-31_label_A.mp4. Detections: Normal
+2025-10-13 04:34:41,986 - INFO - --- Processing: Before.Sunrise.1995__#00-40-52_00-42-01_label_A.mp4 ---
+2025-10-13 04:34:42,064 - INFO - -> Extracting new features...
+2025-10-13 04:35:10,046 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:35:10,046 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:35:10,548 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:35:10,577 - INFO - Successfully processed Before.Sunrise.1995__#00-40-52_00-42-01_label_A.mp4. Detections: Normal
+2025-10-13 04:35:10,577 - INFO - --- Processing: Before.Sunrise.1995__#00-42-52_00-45-31_label_A.mp4 ---
+2025-10-13 04:35:10,608 - INFO - -> Extracting new features...
+2025-10-13 04:36:12,922 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:36:12,922 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:36:13,734 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:36:13,771 - INFO - Successfully processed Before.Sunrise.1995__#00-42-52_00-45-31_label_A.mp4. Detections: Normal
+2025-10-13 04:36:13,771 - INFO - --- Processing: Before.Sunrise.1995__#01-36-45_01-38-10_label_A.mp4 ---
+2025-10-13 04:36:13,809 - INFO - Successfully processed Before.Sunrise.1995__#01-36-45_01-38-10_label_A.mp4. Detections: Normal
+2025-10-13 04:36:13,809 - INFO - --- Processing: Before.Sunset.2004__#00-23-50_00-24-31_label_A.mp4 ---
+2025-10-13 04:36:13,810 - INFO - -> Extracting new features...
+2025-10-13 04:36:31,787 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:36:31,787 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:36:32,194 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:36:32,227 - INFO - Successfully processed Before.Sunset.2004__#00-23-50_00-24-31_label_A.mp4. Detections: Normal
+2025-10-13 04:36:32,227 - INFO - --- Processing: Before.Sunset.2004__#01-14-30_01-16-51_label_A.mp4 ---
+2025-10-13 04:36:32,237 - INFO - -> Extracting new features...
+2025-10-13 04:37:26,666 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:37:26,666 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:37:27,437 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:37:27,472 - INFO - Successfully processed Before.Sunset.2004__#01-14-30_01-16-51_label_A.mp4. Detections: Normal
+2025-10-13 04:37:27,477 - INFO - --- Processing: Black.Hawk.Down.2001__#00-06-44_00-07-39_label_A.mp4 ---
+2025-10-13 04:37:27,479 - INFO - -> Extracting new features...
+2025-10-13 04:37:49,818 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:37:49,818 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:37:50,271 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:37:50,308 - INFO - Successfully processed Black.Hawk.Down.2001__#00-06-44_00-07-39_label_A.mp4. Detections: Normal
+2025-10-13 04:37:50,308 - INFO - --- Processing: Black.Hawk.Down.2001__#01-13-59_01-14-49_label_B2-0-0.mp4 ---
+2025-10-13 04:37:50,329 - INFO - -> Extracting new features...
+2025-10-13 04:38:11,515 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-10-13 04:38:11,515 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-10-13 04:38:11,999 - INFO -    (Features saved to cache for future runs)
+2025-10-13 04:38:12,032 - INFO - Successfully processed Black.Hawk.Down.2001__#01-13-59_01-14-49_label_B2-0-0.mp4. Detections: Shooting; Explosion
+2025-10-13 04:38:12,033 - INFO - --- Processing: Black.Hawk.Down.2001__#01-32-40_01-34-00_label_B4-0-0.mp4 ---
+2025-10-13 04:38:12,047 - INFO - -> Extracting new features...

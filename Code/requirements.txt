@@ -1,0 +1,15 @@
+# requirements.txt
+torch
+torchvision
+torchaudio
+numpy
+opencv-python
+transformers
+tensorflow
+tensorflow-hub
+scikit-learn
+matplotlib
+seaborn
+tqdm
+Pillow
+pandas

@@ -1,0 +1,30 @@
+2025-10-13 03:09:31,329 - INFO - Log file for this run: H:\Crime_Detection\crime_detection_model\logs\evaluate_log_20251013_030931.log
+2025-10-13 03:09:31,329 - INFO - Starting evaluation on directory: H:\Crime_Detection\Testing\Videos
+2025-10-13 03:09:31,345 - INFO - Randomly selecting 25 videos to evaluate from a total of 800.
+2025-10-13 03:27:28,896 - INFO - 
+======================================================================
+                      MODEL EVALUATION REPORT
+======================================================================
+
+2025-10-13 03:27:28,900 - INFO - --- Accuracy Metrics ---
+  - Partial Accuracy (Recall Focused): 40.00%
+    (Percentage of samples where all true crimes were correctly detected, ignoring extra predictions)
+  - Strict Accuracy (Exact Match Ratio): 44.00%
+    (Percentage of samples where predicted labels perfectly match true labels)
+
+2025-10-13 03:27:28,909 - INFO - --- Performance by Crime Category (Precision, Recall, F1-Score) ---
+              precision    recall  f1-score   support
+
+      Normal       0.67      0.83      0.74        12
+    Fighting       0.00      0.00      0.00         0
+    Shooting       1.00      0.60      0.75         5
+        Riot       0.00      0.00      0.00         2
+       Abuse       0.00      0.00      0.00         0
+Car Accident       0.33      0.20      0.25         5
+   Explosion       0.20      0.50      0.29         2
+
+   micro avg       0.48      0.58      0.53        26
+   macro avg       0.31      0.30      0.29        26
+weighted avg       0.58      0.58      0.56        26
+ samples avg       0.54      0.58      0.55        26
+
