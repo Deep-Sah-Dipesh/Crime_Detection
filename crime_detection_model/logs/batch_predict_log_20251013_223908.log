@@ -1,0 +1,121 @@
+2025-10-13 22:39:08,489 - INFO - Log file for this run: H:\Crime_Detection\crime_detection_model\logs\batch_predict_log_20251013_223908.log
+2025-10-13 22:39:08,489 - INFO - Starting batch prediction on directory: H:\Crime_Detection\Testing\Videos
+2025-10-13 22:39:08,489 - INFO - Randomly selecting 50 videos to process from a total of 800.
+2025-10-13 22:39:08,489 - INFO - --- Processing: The.Fast.and.the.Furious.2001__#01-37-40_01-38-30_label_B6-0-0.mp4 ---
+2025-10-13 22:39:08,691 - INFO - Successfully processed The.Fast.and.the.Furious.2001__#01-37-40_01-38-30_label_B6-0-0.mp4. Top Prediction: Explosion
+2025-10-13 22:39:08,691 - INFO - --- Processing: IP.Man.2.2010__#01-44-00_01-44-42_label_A.mp4 ---
+2025-10-13 22:39:08,717 - INFO - Successfully processed IP.Man.2.2010__#01-44-00_01-44-42_label_A.mp4. Top Prediction: Normal
+2025-10-13 22:39:08,718 - INFO - --- Processing: v=vhACO_m5pH0__#00-09-42_00-10-40_label_B6-0-0.mp4 ---
+2025-10-13 22:39:31,958 - INFO - Successfully processed v=vhACO_m5pH0__#00-09-42_00-10-40_label_B6-0-0.mp4. Top Prediction: Car Accident
+2025-10-13 22:39:31,958 - INFO - --- Processing: v=9FxmNOXF25Q__#1_label_A.mp4 ---
+2025-10-13 22:39:31,992 - INFO - Successfully processed v=9FxmNOXF25Q__#1_label_A.mp4. Top Prediction: Fighting
+2025-10-13 22:39:31,992 - INFO - --- Processing: Brick.Mansions.2014__#00-08-37_00-10-04_label_A.mp4 ---
+2025-10-13 22:39:32,023 - INFO - Successfully processed Brick.Mansions.2014__#00-08-37_00-10-04_label_A.mp4. Top Prediction: Fighting
+2025-10-13 22:39:32,023 - INFO - --- Processing: v=Q9Re4CnFJRg__#00-01-21_00-01-47_label_G-0-0.mp4 ---
+2025-10-13 22:39:32,045 - INFO - Successfully processed v=Q9Re4CnFJRg__#00-01-21_00-01-47_label_G-0-0.mp4. Top Prediction: Explosion
+2025-10-13 22:39:32,045 - INFO - --- Processing: v=ajnl7P9bf78__#1_label_A.mp4 ---
+2025-10-13 22:39:32,079 - INFO - Successfully processed v=ajnl7P9bf78__#1_label_A.mp4. Top Prediction: Normal
+2025-10-13 22:39:32,079 - INFO - --- Processing: v=RarYGpz-blM__#1_label_A.mp4 ---
+2025-10-13 22:39:32,129 - INFO - Successfully processed v=RarYGpz-blM__#1_label_A.mp4. Top Prediction: Fighting
+2025-10-13 22:39:32,129 - INFO - --- Processing: v=sE-DC2trBkI__#00-09-00_00-10-05_label_B6-0-0.mp4 ---
+2025-10-13 22:39:32,158 - INFO - Successfully processed v=sE-DC2trBkI__#00-09-00_00-10-05_label_B6-0-0.mp4. Top Prediction: Car Accident
+2025-10-13 22:39:32,158 - INFO - --- Processing: v=MJLylzPRvyw__#1_label_B4-0-0.mp4 ---
+2025-10-13 22:39:32,201 - INFO - Successfully processed v=MJLylzPRvyw__#1_label_B4-0-0.mp4. Top Prediction: Fighting
+2025-10-13 22:39:32,201 - INFO - --- Processing: Be.with.You.2018__#00-04-20_00-05-35_label_A.mp4 ---
+2025-10-13 22:39:32,235 - INFO - Successfully processed Be.with.You.2018__#00-04-20_00-05-35_label_A.mp4. Top Prediction: Normal
+2025-10-13 22:39:32,235 - INFO - --- Processing: v=nLAapCIlr-o__#00-16-10_00-18-09_label_B6-0-0.mp4 ---
+2025-10-13 22:39:32,268 - INFO - Successfully processed v=nLAapCIlr-o__#00-16-10_00-18-09_label_B6-0-0.mp4. Top Prediction: Normal
+2025-10-13 22:39:32,268 - INFO - --- Processing: v=vp_W8CqtCug__#1_label_A.mp4 ---
+2025-10-13 22:40:32,543 - INFO - Successfully processed v=vp_W8CqtCug__#1_label_A.mp4. Top Prediction: Car Accident
+2025-10-13 22:40:32,543 - INFO - --- Processing: Fast.Furious.2009__#01-29-10_01-29-55_label_B2-0-0.mp4 ---
+2025-10-13 22:40:32,585 - INFO - Successfully processed Fast.Furious.2009__#01-29-10_01-29-55_label_B2-0-0.mp4. Top Prediction: Explosion
+2025-10-13 22:40:32,585 - INFO - --- Processing: Saving.Private.Ryan.1998__#02-25-42_02-26-03_label_B2-0-0.mp4 ---
+2025-10-13 22:40:32,625 - INFO - Successfully processed Saving.Private.Ryan.1998__#02-25-42_02-26-03_label_B2-0-0.mp4. Top Prediction: Shooting
+2025-10-13 22:40:32,625 - INFO - --- Processing: v=pFamvR9CpYw__#00-00-00_00-06-36_label_B4-0-0.mp4 ---
+2025-10-13 22:40:32,652 - INFO - Successfully processed v=pFamvR9CpYw__#00-00-00_00-06-36_label_B4-0-0.mp4. Top Prediction: Explosion
+2025-10-13 22:40:32,652 - INFO - --- Processing: v=iHuggczItBk__#00-01-00_00-02-45_label_B6-0-0.mp4 ---
+2025-10-13 22:40:32,685 - INFO - Successfully processed v=iHuggczItBk__#00-01-00_00-02-45_label_B6-0-0.mp4. Top Prediction: Normal
+2025-10-13 22:40:32,685 - INFO - --- Processing: v=JzrpCC7XmyE__#00-06-00_00-12-00_label_A.mp4 ---
+2025-10-13 22:40:32,715 - INFO - Successfully processed v=JzrpCC7XmyE__#00-06-00_00-12-00_label_A.mp4. Top Prediction: Normal
+2025-10-13 22:40:32,715 - INFO - --- Processing: Election.2005__#00-47-57_00-50-54_label_B5-0-0.mp4 ---
+2025-10-13 22:40:32,752 - INFO - Successfully processed Election.2005__#00-47-57_00-50-54_label_B5-0-0.mp4. Top Prediction: Normal
+2025-10-13 22:40:32,752 - INFO - --- Processing: wangted.2008__#0-45-25_0-47-01_label_B1-0-0.mp4 ---
+2025-10-13 22:40:32,786 - INFO - Successfully processed wangted.2008__#0-45-25_0-47-01_label_B1-0-0.mp4. Top Prediction: Fighting
+2025-10-13 22:40:32,786 - INFO - --- Processing: Saving.Private.Ryan.1998__#00-47-50_00-49-35_label_B2-0-0.mp4 ---
+2025-10-13 22:40:32,820 - INFO - Successfully processed Saving.Private.Ryan.1998__#00-47-50_00-49-35_label_B2-0-0.mp4. Top Prediction: Shooting
+2025-10-13 22:40:32,820 - INFO - --- Processing: The.World.Is.Not.Enough.1999__#00-10-22_00-10-40_label_G-0-0.mp4 ---
+2025-10-13 22:40:32,854 - INFO - Successfully processed The.World.Is.Not.Enough.1999__#00-10-22_00-10-40_label_G-0-0.mp4. Top Prediction: Shooting
+2025-10-13 22:40:32,854 - INFO - --- Processing: The.Pursuit.of.Happyness.2006__#00-17-30_00-19-10_label_A.mp4 ---
+2025-10-13 22:40:32,879 - INFO - Successfully processed The.Pursuit.of.Happyness.2006__#00-17-30_00-19-10_label_A.mp4. Top Prediction: Fighting
+2025-10-13 22:40:32,879 - INFO - --- Processing: Kill.Bill.Vol.1.2003__#01-21-39_01-26-55_label_B1-0-0.mp4 ---
+2025-10-13 22:40:32,904 - INFO - Successfully processed Kill.Bill.Vol.1.2003__#01-21-39_01-26-55_label_B1-0-0.mp4. Top Prediction: Fighting
+2025-10-13 22:40:32,904 - INFO - --- Processing: Quantum.Of.Solace.2008__#01-19-30_01-20-05_label_B1-0-0.mp4 ---
+2025-10-13 22:40:32,937 - INFO - Successfully processed Quantum.Of.Solace.2008__#01-19-30_01-20-05_label_B1-0-0.mp4. Top Prediction: Fighting
+2025-10-13 22:40:32,937 - INFO - --- Processing: v=6KQFxxHmVMc__#1_label_B1-0-0.mp4 ---
+2025-10-13 22:40:32,959 - INFO - Successfully processed v=6KQFxxHmVMc__#1_label_B1-0-0.mp4. Top Prediction: Fighting
+2025-10-13 22:40:32,962 - INFO - --- Processing: Good.Will.Hunting.1997__#00-58-18_01-02-30_label_A.mp4 ---
+2025-10-13 22:40:32,984 - INFO - Successfully processed Good.Will.Hunting.1997__#00-58-18_01-02-30_label_A.mp4. Top Prediction: Normal
+2025-10-13 22:40:32,985 - INFO - --- Processing: Spectre.2015__#02-15-30_02-16-05_label_G-0-0.mp4 ---
+2025-10-13 22:40:33,005 - INFO - Successfully processed Spectre.2015__#02-15-30_02-16-05_label_G-0-0.mp4. Top Prediction: Shooting
+2025-10-13 22:40:33,005 - INFO - --- Processing: Kill.Bill.Vol.2.2004__#01-03-13_01-04-13_label_A.mp4 ---
+2025-10-13 22:40:33,036 - INFO - Successfully processed Kill.Bill.Vol.2.2004__#01-03-13_01-04-13_label_A.mp4. Top Prediction: Fighting
+2025-10-13 22:40:33,037 - INFO - --- Processing: The.World.Is.Not.Enough.1999__#00-07-04_00-07-45_label_G-B2-0.mp4 ---
+2025-10-13 22:40:33,060 - INFO - Successfully processed The.World.Is.Not.Enough.1999__#00-07-04_00-07-45_label_G-B2-0.mp4. Top Prediction: Explosion
+2025-10-13 22:40:33,060 - INFO - --- Processing: Skyfall.2012__#02-08-44_02-09-17_label_B1-0-0.mp4 ---
+2025-10-13 22:40:33,086 - INFO - Successfully processed Skyfall.2012__#02-08-44_02-09-17_label_B1-0-0.mp4. Top Prediction: Fighting
+2025-10-13 22:40:33,086 - INFO - --- Processing: v=-5RWxUUJ7lQ__#1_label_A.mp4 ---
+2025-10-13 22:40:33,104 - INFO - Successfully processed v=-5RWxUUJ7lQ__#1_label_A.mp4. Top Prediction: Explosion
+2025-10-13 22:40:33,104 - INFO - --- Processing: The.Bourne.Identity.2002__#01-27-39_01-29-19_label_B2-0-0.mp4 ---
+2025-10-13 22:40:33,131 - INFO - Successfully processed The.Bourne.Identity.2002__#01-27-39_01-29-19_label_B2-0-0.mp4. Top Prediction: Explosion
+2025-10-13 22:40:33,132 - INFO - --- Processing: City.of.God.2002__#00-33-10_00-34-50_label_A.mp4 ---
+2025-10-13 22:40:33,151 - INFO - Successfully processed City.of.God.2002__#00-33-10_00-34-50_label_A.mp4. Top Prediction: Normal
+2025-10-13 22:40:33,151 - INFO - --- Processing: Law.Abiding.Citizen.2009__#00-00-35_00-01-31_label_A.mp4 ---
+2025-10-13 22:40:33,181 - INFO - Successfully processed Law.Abiding.Citizen.2009__#00-00-35_00-01-31_label_A.mp4. Top Prediction: Normal
+2025-10-13 22:40:33,181 - INFO - --- Processing: v=JzrpCC7XmyE__#01-06-00_01-12-00_label_A.mp4 ---
+2025-10-13 22:40:33,204 - INFO - Successfully processed v=JzrpCC7XmyE__#01-06-00_01-12-00_label_A.mp4. Top Prediction: Normal
+2025-10-13 22:40:33,204 - INFO - --- Processing: GoldenEye.1995__#01-17-05_01-19-57_label_B2-B1-0.mp4 ---
+2025-10-13 22:40:33,229 - INFO - Successfully processed GoldenEye.1995__#01-17-05_01-19-57_label_B2-B1-0.mp4. Top Prediction: Shooting
+2025-10-13 22:40:33,230 - INFO - --- Processing: v=yy-KIWDcBr4__#00-08-35_00-10-25_label_B6-0-0.mp4 ---
+2025-10-13 22:41:15,391 - INFO - Successfully processed v=yy-KIWDcBr4__#00-08-35_00-10-25_label_B6-0-0.mp4. Top Prediction: Car Accident
+2025-10-13 22:41:15,391 - INFO - --- Processing: Salt.2010__#00-13-45_00-16-10_label_A.mp4 ---
+2025-10-13 22:41:15,424 - INFO - Successfully processed Salt.2010__#00-13-45_00-16-10_label_A.mp4. Top Prediction: Normal
+2025-10-13 22:41:15,424 - INFO - --- Processing: v=S1meRf5BsEw__#1_label_A.mp4 ---
+2025-10-13 22:41:15,458 - INFO - Successfully processed v=S1meRf5BsEw__#1_label_A.mp4. Top Prediction: Normal
+2025-10-13 22:41:15,458 - INFO - --- Processing: v=pFamvR9CpYw__#00-06-36_00-15-20_label_B4-0-0.mp4 ---
+2025-10-13 22:41:15,482 - INFO - Successfully processed v=pFamvR9CpYw__#00-06-36_00-15-20_label_B4-0-0.mp4. Top Prediction: Explosion
+2025-10-13 22:41:15,482 - INFO - --- Processing: Bullet.in.the.Head.1990__#00-23-31_00-24-40_label_G-0-0.mp4 ---
+2025-10-13 22:41:15,519 - INFO - Successfully processed Bullet.in.the.Head.1990__#00-23-31_00-24-40_label_G-0-0.mp4. Top Prediction: Normal
+2025-10-13 22:41:15,519 - INFO - --- Processing: v=rJz4NXm6vis__#1_label_B4-0-0.mp4 ---
+2025-10-13 22:41:15,554 - INFO - Successfully processed v=rJz4NXm6vis__#1_label_B4-0-0.mp4. Top Prediction: Fighting
+2025-10-13 22:41:15,554 - INFO - --- Processing: v=0qtIjyt-7wg__#00-04-00_00-05-15_label_B6-0-0.mp4 ---
+2025-10-13 22:41:15,587 - INFO - Successfully processed v=0qtIjyt-7wg__#00-04-00_00-05-15_label_B6-0-0.mp4. Top Prediction: Car Accident
+2025-10-13 22:41:15,587 - INFO - --- Processing: Skyfall.2012__#00-06-10_00-06-25_label_B6-0-0.mp4 ---
+2025-10-13 22:41:15,620 - INFO - Successfully processed Skyfall.2012__#00-06-10_00-06-25_label_B6-0-0.mp4. Top Prediction: Shooting
+2025-10-13 22:41:15,620 - INFO - --- Processing: Braveheart.1995__#01-26-50_01-32-30_label_B1-0-0.mp4 ---
+2025-10-13 22:41:15,654 - INFO - Successfully processed Braveheart.1995__#01-26-50_01-32-30_label_B1-0-0.mp4. Top Prediction: Fighting
+2025-10-13 22:41:15,654 - INFO - --- Processing: v=k98yVPXiYoU__#1_label_G-0-0.mp4 ---
+2025-10-13 22:41:15,684 - INFO - Successfully processed v=k98yVPXiYoU__#1_label_G-0-0.mp4. Top Prediction: Explosion
+2025-10-13 22:41:15,685 - INFO - --- Processing: Hear.Me.2009__#00-30-50_00-32-31_label_A.mp4 ---
+2025-10-13 22:41:15,712 - INFO - Successfully processed Hear.Me.2009__#00-30-50_00-32-31_label_A.mp4. Top Prediction: Normal
+2025-10-13 22:41:15,712 - INFO - --- Processing: The.Hurt.Locker.2008__#0-08-45_0-09-57_label_G-0-0.mp4 ---
+2025-10-13 22:41:15,737 - INFO - Successfully processed The.Hurt.Locker.2008__#0-08-45_0-09-57_label_G-0-0.mp4. Top Prediction: Explosion
+2025-10-13 22:41:15,737 - INFO - --- Processing: v=AqFWYZsOgWY__#00-21-00_00-24-00_label_A.mp4 ---
+2025-10-13 22:41:15,768 - INFO - Successfully processed v=AqFWYZsOgWY__#00-21-00_00-24-00_label_A.mp4. Top Prediction: Riot
+2025-10-13 22:41:15,768 - INFO - 
+--- Intermittently saving results at video 50/50 ---
+
+2025-10-13 22:41:15,792 - INFO - 
+--- Saving final results ---
+2025-10-13 22:41:15,804 - INFO - 
+--- Sample of 10 Highest Confidence Predictions ---
+                                                             filename prediction_1 confidence_1  prediction_2 confidence_2  prediction_3 confidence_3
+39                                      v=S1meRf5BsEw__#1_label_A.mp4       Normal       99.99%  Car Accident        2.50%     Explosion        1.43%
+41        Bullet.in.the.Head.1990__#00-23-31_00-24-40_label_G-0-0.mp4       Normal       98.88%     Explosion       10.50%  Car Accident        2.43%
+27                   Spectre.2015__#02-15-30_02-16-05_label_G-0-0.mp4     Shooting       98.45%     Explosion       87.91%      Fighting       59.52%
+29  The.World.Is.Not.Enough.1999__#00-07-04_00-07-45_label_G-B2-0.mp4    Explosion       98.29%      Shooting       21.20%      Fighting       10.64%
+24        Quantum.Of.Solace.2008__#01-19-30_01-20-05_label_B1-0-0.mp4     Fighting       95.52%      Shooting       19.63%  Car Accident       14.79%
+36               GoldenEye.1995__#01-17-05_01-19-57_label_B2-B1-0.mp4     Shooting       93.97%     Explosion       78.99%      Fighting       20.57%
+21   The.World.Is.Not.Enough.1999__#00-10-22_00-10-40_label_G-0-0.mp4     Shooting       92.87%     Explosion       73.27%  Car Accident       34.99%
+19                    wangted.2008__#0-45-25_0-47-01_label_B1-0-0.mp4     Fighting       89.05%  Car Accident        5.52%     Explosion        1.43%
+46                                  v=k98yVPXiYoU__#1_label_G-0-0.mp4    Explosion       88.98%  Car Accident       57.91%        Normal       45.20%
+48             The.Hurt.Locker.2008__#0-08-45_0-09-57_label_G-0-0.mp4    Explosion       88.40%  Car Accident       21.93%      Fighting        6.15%

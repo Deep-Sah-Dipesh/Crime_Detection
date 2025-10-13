@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Detection AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3b82f6;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        #analyze-button:disabled { cursor: not-allowed; background-color: #9ca3af; }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12 transition-all duration-300">
+        
+        <div id="header" class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800">Crime Detection AI</h1>
+            <p class="text-gray-500 mt-2">Upload a video or audio file to analyze its content.</p>
+        </div>
+
+        <!-- Initial Upload View -->
+        <div id="upload-view">
+            <label for="file-upload" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition">
+                <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                    <svg class="w-10 h-10 mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-4-4V7a4 4 0 014-4h4l2 2h4a2 2 0 012 2v2a2 2 0 01-2 2h-2l-2-2H7z"></path></svg>
+                    <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                    <p class="text-xs text-gray-500">MP4, MOV, AVI, MP3, WAV (MAX. 250MB)</p>
+                </div>
+            </label>
+            <input id="file-upload" type="file" class="hidden" accept="video/*,audio/*"/>
+        </div>
+
+        <!-- Analysis View (Initially Hidden) -->
+        <div id="analysis-view" class="hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Left Column: Media Preview -->
+                <div id="preview-container">
+                    <p id="file-name-display" class="text-center font-semibold text-gray-800 mb-4"></p>
+                    <div id="media-player-wrapper" class="bg-black rounded-lg overflow-hidden shadow-lg sticky top-8"></div>
+                </div>
+
+                <!-- Right Column: Dynamic Content -->
+                <div id="dynamic-content-area" class="flex flex-col justify-center">
+                    
+                    <!-- State 1: Analyze Button -->
+                    <div id="analyze-container">
+                         <p class="text-center text-gray-500 mb-4">Preview your file on the left and click below to begin.</p>
+                         <button id="analyze-button" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition transform hover:scale-105">
+                            Analyze File
+                        </button>
+                        <div class="text-center mt-4">
+                             <label for="file-upload" class="text-blue-600 hover:underline cursor-pointer text-sm font-medium">Or change file</label>
+                        </div>
+                    </div>
+
+                    <!-- State 2: Loading Spinner -->
+                    <div id="loading-container" class="hidden text-center">
+                        <div class="flex justify-center items-center">
+                            <div class="loader"></div>
+                        </div>
+                        <p id="loading-status-text" class="text-gray-600 mt-4 font-medium text-lg">Uploading file...</p>
+                    </div>
+
+                    <!-- State 3: Results Display -->
+                    <div id="results-container" class="hidden">
+                        <h2 class="text-2xl font-bold text-gray-800">Analysis Results</h2>
+                        <div id="results-list" class="mt-4 space-y-4"></div>
+                        <div class="mt-6">
+                            <button onclick="resetUI()" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition">
+                                Analyze Another File
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Message Area -->
+        <div id="error-container" class="hidden mt-6 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg relative" role="alert">
+            <strong class="font-bold">Error:</strong>
+            <span id="error-message" class="block sm:inline"></span>
+        </div>
+    </div>
+
+    <script>
+        const uploadView = document.getElementById('upload-view');
+        const analysisView = document.getElementById('analysis-view');
+        const uploadInput = document.getElementById('file-upload');
+        const analyzeButton = document.getElementById('analyze-button');
+        const analyzeContainer = document.getElementById('analyze-container');
+        
+        const previewContainer = document.getElementById('preview-container');
+        const mediaPlayerWrapper = document.getElementById('media-player-wrapper');
+        const fileNameDisplay = document.getElementById('file-name-display');
+        
+        const dynamicContentArea = document.getElementById('dynamic-content-area');
+        const loadingContainer = document.getElementById('loading-container');
+        const loadingStatusText = document.getElementById('loading-status-text');
+        const resultsContainer = document.getElementById('results-container');
+        const resultsList = document.getElementById('results-list');
+        
+        const errorContainer = document.getElementById('error-container');
+        const errorMessage = document.getElementById('error-message');
+
+        let currentFile = null;
+
+        uploadInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                currentFile = file;
+                displayPreview(file);
+                uploadView.classList.add('hidden');
+                analysisView.classList.remove('hidden');
+                // Ensure correct initial state for dynamic area
+                analyzeContainer.classList.remove('hidden');
+                loadingContainer.classList.add('hidden');
+                resultsContainer.classList.add('hidden');
+            }
+        });
+
+        analyzeButton.addEventListener('click', async () => {
+            if (!currentFile) return;
+            showLoading();
+            const formData = new FormData();
+            formData.append('file', currentFile);
+            try {
+                const response = await fetch('/predict', { method: 'POST', body: formData });
+                const data = await response.json();
+                if (!response.ok) throw new Error(data.error || 'An unknown error occurred.');
+                displayResults(data.results);
+            } catch (error) {
+                showError(error.message);
+            }
+        });
+
+        function displayPreview(file) {
+            const objectURL = URL.createObjectURL(file);
+            mediaPlayerWrapper.innerHTML = '';
+            let player;
+            if (file.type.startsWith('video/')) {
+                player = document.createElement('video');
+                player.controls = true;
+                player.classList.add('w-full', 'h-auto', 'object-contain', 'rounded-lg');
+            } else if (file.type.startsWith('audio/')) {
+                player = document.createElement('audio');
+                player.controls = true;
+                player.classList.add('w-full');
+            }
+            if (player) {
+                player.src = objectURL;
+                mediaPlayerWrapper.appendChild(player);
+                fileNameDisplay.textContent = file.name;
+            }
+        }
+        
+        function showLoading() {
+            analyzeContainer.classList.add('hidden');
+            loadingContainer.classList.remove('hidden');
+            
+            loadingStatusText.textContent = 'Uploading file...';
+            setTimeout(() => {
+                loadingStatusText.textContent = 'Extracting features & analyzing...';
+            }, 1500);
+        }
+        
+        function getConfidenceColor(confidence) {
+            const hue = (1.0 - confidence) * 120;
+            return `hsl(${hue}, 90%, 85%)`; 
+        }
+
+        function displayResults(results) {
+            loadingContainer.classList.add('hidden');
+            resultsContainer.classList.remove('hidden');
+            resultsList.innerHTML = '';
+            
+            if (results.length === 0) {
+                resultsList.innerHTML = '<p class="text-center text-gray-500">No activities detected with significant confidence.</p>';
+                return;
+            }
+
+            const topConfidence = parseFloat(results[0].confidence.replace('%', '')) / 100;
+
+            results.forEach((result, index) => {
+                const confidenceValue = parseFloat(result.confidence.replace('%', '')) / 100;
+                const bgColor = getConfidenceColor(confidenceValue);
+                
+                let highlightClass = 'transition duration-200';
+                if (index === 0) {
+                    highlightClass += ' border-2 border-blue-500 shadow-md';
+                } else if ((topConfidence - confidenceValue) < 0.05) {
+                    highlightClass += ' border-2 border-yellow-400';
+                } else {
+                    highlightClass += ' border border-gray-200';
+                }
+
+                const item = `
+                    <div class="rounded-lg p-4 flex items-center justify-between ${highlightClass}" style="background-color: ${bgColor};">
+                        <span class="font-semibold text-lg text-gray-800">${result.name}</span>
+                        <span class="text-lg font-bold text-gray-900">${result.confidence}</span>
+                    </div>
+                `;
+                resultsList.innerHTML += item;
+            });
+        }
+
+        function showError(message) {
+            resetUI();
+            errorContainer.classList.remove('hidden');
+            errorMessage.textContent = message;
+        }
+
+        function resetUI() {
+            analysisView.classList.add('hidden');
+            uploadView.classList.remove('hidden');
+            errorContainer.classList.add('hidden');
+            
+            // Clear media player and file input
+            mediaPlayerWrapper.innerHTML = '';
+            uploadInput.value = '';
+            currentFile = null;
+        }
+    </script>
+</body>
+</html>
+

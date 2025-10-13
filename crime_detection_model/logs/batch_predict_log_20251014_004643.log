@@ -1,0 +1,38 @@
+2025-10-14 00:46:43,397 - INFO - Log file for this run: H:\Crime_Detection\crime_detection_model\logs\batch_predict_log_20251014_004643.log
+2025-10-14 00:46:43,397 - INFO - Starting batch prediction on directory: H:\Crime_Detection\Testing\Videos
+2025-10-14 00:46:43,397 - INFO - Randomly selecting 10 videos to process from a total of 800.
+2025-10-14 00:46:43,403 - INFO - --- Processing: v=7rDRFFSUrPI__#00-01-50_00-02-32_label_G-0-0.mp4 ---
+2025-10-14 00:46:43,599 - INFO - Successfully processed v=7rDRFFSUrPI__#00-01-50_00-02-32_label_G-0-0.mp4. Top Prediction: Explosion
+2025-10-14 00:46:43,903 - INFO - --- Processing: v=-etV57xZ4_I__#1_label_B4-0-0.mp4 ---
+2025-10-14 00:46:43,931 - INFO - Successfully processed v=-etV57xZ4_I__#1_label_B4-0-0.mp4. Top Prediction: Riot
+2025-10-14 00:46:43,931 - INFO - --- Processing: v=xbPWQKZspfU__#1_label_B1-0-0.mp4 ---
+2025-10-14 00:48:02,604 - INFO - Successfully processed v=xbPWQKZspfU__#1_label_B1-0-0.mp4. Top Prediction: Fighting
+2025-10-14 00:48:02,604 - INFO - --- Processing: v=Q8b0XbtpFsA__#1_label_A.mp4 ---
+2025-10-14 00:48:02,638 - INFO - Successfully processed v=Q8b0XbtpFsA__#1_label_A.mp4. Top Prediction: Fighting
+2025-10-14 00:48:02,640 - INFO - --- Processing: v=iWfUqxibqG0__#1_label_G-0-0.mp4 ---
+2025-10-14 00:48:02,671 - INFO - Successfully processed v=iWfUqxibqG0__#1_label_G-0-0.mp4. Top Prediction: Car Accident
+2025-10-14 00:48:02,671 - INFO - --- Processing: The.Notebook.2004__#00-08-55_00-10-50_label_A.mp4 ---
+2025-10-14 00:48:02,696 - INFO - Successfully processed The.Notebook.2004__#00-08-55_00-10-50_label_A.mp4. Top Prediction: Normal
+2025-10-14 00:48:02,704 - INFO - --- Processing: v=3MUqt3OkxIo__#1_label_A.mp4 ---
+2025-10-14 00:48:02,737 - INFO - Successfully processed v=3MUqt3OkxIo__#1_label_A.mp4. Top Prediction: Explosion
+2025-10-14 00:48:02,738 - INFO - --- Processing: v=rKpXqwE2rg8__#00-01-57_00-03-06_label_B4-0-0.mp4 ---
+2025-10-14 00:48:02,766 - INFO - Successfully processed v=rKpXqwE2rg8__#00-01-57_00-03-06_label_B4-0-0.mp4. Top Prediction: Riot
+2025-10-14 00:48:02,766 - INFO - --- Processing: Haywire.2011__#00-39-07_00-41-48_label_B1-B2-0.mp4 ---
+2025-10-14 00:48:02,801 - INFO - Successfully processed Haywire.2011__#00-39-07_00-41-48_label_B1-B2-0.mp4. Top Prediction: Fighting
+2025-10-14 00:48:02,801 - INFO - --- Processing: v=QWwDsPSe7iM__#1_label_B4-0-0.mp4 ---
+2025-10-14 00:48:02,835 - INFO - Successfully processed v=QWwDsPSe7iM__#1_label_B4-0-0.mp4. Top Prediction: Normal
+2025-10-14 00:48:02,836 - INFO - 
+--- Saving final results ---
+2025-10-14 00:48:02,896 - INFO - 
+--- Sample of 10 Highest Confidence Predictions ---
+                                             filename  prediction_1 confidence_1  prediction_2 confidence_2  prediction_3 confidence_3
+1                  v=-etV57xZ4_I__#1_label_B4-0-0.mp4          Riot      100.00%  Car Accident        0.12%         Abuse        0.08%
+7  v=rKpXqwE2rg8__#00-01-57_00-03-06_label_B4-0-0.mp4          Riot       99.99%      Fighting       23.01%  Car Accident        8.05%
+3                       v=Q8b0XbtpFsA__#1_label_A.mp4      Fighting       68.54%     Explosion       17.20%  Car Accident       14.87%
+5   The.Notebook.2004__#00-08-55_00-10-50_label_A.mp4        Normal       62.66%     Explosion        6.95%      Fighting        5.97%
+8  Haywire.2011__#00-39-07_00-41-48_label_B1-B2-0.mp4      Fighting       60.64%  Car Accident        5.11%      Shooting        0.10%
+0   v=7rDRFFSUrPI__#00-01-50_00-02-32_label_G-0-0.mp4     Explosion       52.81%      Fighting       13.08%        Normal        5.07%
+2                  v=xbPWQKZspfU__#1_label_B1-0-0.mp4      Fighting       48.50%  Car Accident       27.63%          Riot        6.17%
+9                  v=QWwDsPSe7iM__#1_label_B4-0-0.mp4        Normal       24.92%      Fighting       23.79%     Explosion       10.79%
+4                   v=iWfUqxibqG0__#1_label_G-0-0.mp4  Car Accident       14.06%      Fighting       10.79%     Explosion        7.54%
+6                       v=3MUqt3OkxIo__#1_label_A.mp4     Explosion        4.69%        Normal        0.17%      Fighting        0.15%

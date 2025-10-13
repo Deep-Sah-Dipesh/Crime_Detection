@@ -118,8 +118,11 @@ def evaluate_model(test_dir, num_videos=None):
     pred_top1_binarized = mlb.transform(pred_labels_top1)
     target_names = [config.LABEL_MAP[code] for code in mlb.classes_]
 
+    # Calculate Top-3 Partial Accuracy
     top3_match_count = sum(1 for true, top3_preds in zip(true_labels, pred_labels_top3) if not set(true).isdisjoint(set(top3_preds)))
     top3_partial_accuracy = top3_match_count / len(true_labels) if true_labels else 0
+    
+    # Calculate Strict Top-1 Accuracy
     strict_accuracy = accuracy_score(true_binarized, pred_top1_binarized)
 
     # --- Reporting ---
@@ -130,23 +133,27 @@ def evaluate_model(test_dir, num_videos=None):
         "\n--- Accuracy Metrics ---\n"
         f"  - Top-3 Partial Accuracy: {top3_partial_accuracy:.2%}\n"
         f"    (Percentage of samples where any of the Top 3 predictions match a true crime)\n"
-        f"  - Strict Accuracy (Top-1 Exact Match): {strict_accuracy:.2%}\n"
+        f"  - Strict Accuracy (Top - 1st Exact Match): {strict_accuracy:.2%}\n"
         f"    (Percentage of samples where the #1 prediction perfectly matches all true labels)\n"
     )
     logger.info(accuracy_report)
     
+    # Generate the classification report based on the Top-1 prediction
     report = classification_report(true_binarized, pred_top1_binarized, target_names=target_names, zero_division=0)
     logger.info("---\n\n" + report)
 
     # --- Plotting ---
     try:
-        cm = np.array([list(np.sum(true_binarized, axis=0)), list(np.sum(pred_top1_binarized, axis=0))]).T
+        # Create a DataFrame for easier plotting
+        true_counts = np.sum(true_binarized, axis=0)
+        pred_counts = np.sum(pred_top1_binarized, axis=0)
+        plot_df = pd.DataFrame({'Ground Truth': true_counts, 'Predicted': pred_counts}, index=target_names)
+
         plt.figure(figsize=(12, 8))
-        sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', 
-                    xticklabels=['Predicted'], yticklabels=target_names)
+        plot_df.plot(kind='bar', figsize=(14, 7), colormap='viridis')
         plt.title('Prediction Counts per Category (vs. Ground Truth)')
-        plt.xlabel('Prediction Type')
-        plt.ylabel('Crime Category')
+        plt.ylabel('Number of Videos')
+        plt.xticks(rotation=45, ha="right")
         plt.tight_layout()
         plot_path = os.path.join(os.path.dirname(config.PROJECT_ROOT), "evaluation_summary.png")
         plt.savefig(plot_path)
@@ -160,7 +167,7 @@ if __name__ == "__main__":
     parser.add_argument("test_directory", type=str, help="Path to the directory with labeled test videos.")
     args = parser.parse_args()
     
-    NUM_VIDEOS_TO_EVALUATE = 25 
+    NUM_VIDEOS_TO_EVALUATE = None
 
     logger, log_file = setup_logging(config.LOG_DIR)
     logger.info(f"Log file for this run: {log_file}")

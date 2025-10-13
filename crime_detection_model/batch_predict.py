@@ -91,6 +91,7 @@ def run_batch_prediction(video_dir, output_csv_path, num_videos=None):
                 results.append(row)
                 logger.info(f"Successfully processed {filename}. Top Prediction: {row.get('prediction_1', 'N/A')}")
 
+                # Intermittently save progress
                 if (i + 1) % 50 == 0:
                     logger.info(f"\n--- Intermittently saving results at video {i+1}/{len(video_files_to_process)} ---\n")
                     save_results(results, output_csv_path)
@@ -102,15 +103,25 @@ def run_batch_prediction(video_dir, output_csv_path, num_videos=None):
         logger.info("\n--- Saving final results ---")
         save_results(results, output_csv_path)
         logger.info(f"✅ Batch prediction finished. Final results saved to: {output_csv_path}")
+        
+        # --- ENHANCED FINAL SUMMARY ---
         if results:
-            logger.info("\n--- Sample of Predictions ---\n" + pd.DataFrame(results).head().to_string())
+            results_df = pd.DataFrame(results)
+            if 'confidence_1' in results_df.columns:
+                results_df['conf_numeric'] = results_df['confidence_1'].str.rstrip('%').astype(float)
+                sample_df = results_df.sort_values(by='conf_numeric', ascending=False).head(10)
+                display_columns = [col for col in sample_df.columns if col != 'conf_numeric']
+                logger.info("\n--- Sample of 10 Highest Confidence Predictions ---\n" + sample_df[display_columns].to_string())
+            else:
+                logger.info("\n--- Sample of Predictions ---\n" + results_df.head().to_string())
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run batch prediction on a directory of videos.")
     parser.add_argument("video_directory", type=str, help="Path to the directory containing videos.")
     args = parser.parse_args()
     
-    NUM_VIDEOS_TO_PROCESS = None 
+    NUM_VIDEOS_TO_PROCESS = 10 
 
     logger, log_file = setup_logging(config.LOG_DIR)
     logger.info(f"Log file for this run: {log_file}")

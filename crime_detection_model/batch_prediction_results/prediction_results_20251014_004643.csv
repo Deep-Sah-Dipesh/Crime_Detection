@@ -1,0 +1,11 @@
+filename,prediction_1,confidence_1,prediction_2,confidence_2,prediction_3,confidence_3
+v=7rDRFFSUrPI__#00-01-50_00-02-32_label_G-0-0.mp4,Explosion,52.81%,Fighting,13.08%,Normal,5.07%
+v=-etV57xZ4_I__#1_label_B4-0-0.mp4,Riot,100.00%,Car Accident,0.12%,Abuse,0.08%
+v=xbPWQKZspfU__#1_label_B1-0-0.mp4,Fighting,48.50%,Car Accident,27.63%,Riot,6.17%
+v=Q8b0XbtpFsA__#1_label_A.mp4,Fighting,68.54%,Explosion,17.20%,Car Accident,14.87%
+v=iWfUqxibqG0__#1_label_G-0-0.mp4,Car Accident,14.06%,Fighting,10.79%,Explosion,7.54%
+The.Notebook.2004__#00-08-55_00-10-50_label_A.mp4,Normal,62.66%,Explosion,6.95%,Fighting,5.97%
+v=3MUqt3OkxIo__#1_label_A.mp4,Explosion,4.69%,Normal,0.17%,Fighting,0.15%
+v=rKpXqwE2rg8__#00-01-57_00-03-06_label_B4-0-0.mp4,Riot,99.99%,Fighting,23.01%,Car Accident,8.05%
+Haywire.2011__#00-39-07_00-41-48_label_B1-B2-0.mp4,Fighting,60.64%,Car Accident,5.11%,Shooting,0.10%
+v=QWwDsPSe7iM__#1_label_B4-0-0.mp4,Normal,24.92%,Fighting,23.79%,Explosion,10.79%

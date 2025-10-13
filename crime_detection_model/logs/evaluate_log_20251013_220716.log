@@ -1,0 +1,5 @@
+2025-10-13 22:07:16,264 - INFO - Log file for this run: H:\Crime_Detection\crime_detection_model\logs\evaluate_log_20251013_220716.log
+2025-10-13 22:07:16,264 - INFO - Starting evaluation on directory: H:\Crime_Detection\Testing\Videos
+2025-10-13 22:07:16,264 - INFO - Randomly selecting 500 videos to evaluate from a total of 800.
+2025-10-13 22:13:52,050 - INFO - 
+--- Process finished or interrupted. Processed 80 videos. ---

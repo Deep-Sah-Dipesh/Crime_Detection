@@ -1,7 +1,7 @@
 import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2' 
 import logging
-logging.getLogger('tensorflow_hub').setLevel(logging.ERROR)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2' 
+logging.getLogger('tensorflow').setLevel(logging.ERROR)
 import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -86,11 +86,11 @@ def extract_audio_features(audio_path):
     script_dir = os.path.dirname(os.path.abspath(__file__))
     base_local_models_dir = os.path.join(script_dir, "local_models")
     
+    # Automatically find the model subdirectory.
     try:
         subdirectories = [d for d in os.listdir(base_local_models_dir) if os.path.isdir(os.path.join(base_local_models_dir, d))]
         if not subdirectories:
             raise FileNotFoundError("No subdirectories found in local_models folder.")
-
         local_model_path = os.path.join(base_local_models_dir, subdirectories[0])
     except (FileNotFoundError, IndexError):
          raise FileNotFoundError(f"YAMNet model directory not found inside '{base_local_models_dir}'.")
@@ -111,30 +111,30 @@ def extract_audio_features(audio_path):
     _, embeddings, _ = yamnet_model(waveform.squeeze().numpy())
     return torch.from_numpy(tf.reduce_mean(embeddings, axis=0).numpy()).float()
 
-def extract_features(file_path):
+def extract_features(file_path, file_ext):
     """Orchestrates all feature extraction for a given file."""
     logging.info("-> Extracting new features...")
-    temp_dir = os.path.join(config.PROJECT_ROOT, "temp_processing")
-    os.makedirs(temp_dir, exist_ok=True)
     
     video_vec = torch.zeros(config.VIDEO_FEAT_DIM)
     audio_vec = torch.zeros(config.AUDIO_FEAT_DIM)
     
-    try:
+    if file_ext in ['.mp4', '.avi', '.mov', '.mkv']:
         video_vec = extract_video_features(file_path)
-        audio_path = os.path.join(temp_dir, "temp_audio.mp3")
-        
-        ffmpeg_executable = getattr(config, 'FFMPEG_PATH', 'ffmpeg')
-        command = [ffmpeg_executable, '-i', file_path, '-q:a', '0', '-map', 'a', '-y', audio_path]
-        
-        subprocess.run(command, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        audio_vec = extract_audio_features(audio_path)
-    
-    except Exception as e:
-        logging.warning(f"Could not extract audio. Prediction based on video only. Error: {e}")
-    finally:
-        if os.path.exists(temp_dir):
-            shutil.rmtree(temp_dir)
+        temp_dir = os.path.join(config.PROJECT_ROOT, "temp_processing")
+        os.makedirs(temp_dir, exist_ok=True)
+        try:
+            audio_path = os.path.join(temp_dir, "temp_audio.mp3")
+            ffmpeg_executable = getattr(config, 'FFMPEG_PATH', 'ffmpeg')
+            command = [ffmpeg_executable, '-i', file_path, '-q:a', '0', '-map', 'a', '-y', audio_path]
+            subprocess.run(command, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            audio_vec = extract_audio_features(audio_path)
+        except Exception as e:
+            logging.warning(f"Could not extract audio. Prediction based on video only. Error: {e}")
+        finally:
+            if os.path.exists(temp_dir):
+                shutil.rmtree(temp_dir)
+    elif file_ext in ['.mp3', '.wav', '.flac']:
+        audio_vec = extract_audio_features(file_path)
 
     text_vec = torch.zeros(config.TEXT_FEAT_DIM)
     return torch.cat((video_vec, audio_vec, text_vec), dim=-1)
@@ -148,12 +148,13 @@ def get_prediction(file_path):
         raise FileNotFoundError(f"Model file not found at '{model_path}'.")
 
     base_filename = os.path.splitext(os.path.basename(file_path))[0]
+    file_ext = os.path.splitext(file_path)[1].lower()
     cached_feature_path = os.path.join(config.TESTING_FEATURES_DIR, f"{base_filename}_features.pt")
 
     if os.path.exists(cached_feature_path):
         combined_features_no_batch = torch.load(cached_feature_path, weights_only=True)
     else:
-        combined_features_no_batch = extract_features(file_path)
+        combined_features_no_batch = extract_features(file_path, file_ext)
         os.makedirs(config.TESTING_FEATURES_DIR, exist_ok=True)
         torch.save(combined_features_no_batch, cached_feature_path)
         logging.info(f"   (Features saved to cache for future runs)")
@@ -201,7 +202,7 @@ def predict_on_file(file_path, threshold=0.5):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("\nUsage: python predict.py \"<path_to_video_file>\"")
+        print("\nUsage: python predict.py \"<path_to_media_file>\"")
         sys.exit(1)
     
     file_to_predict = sys.argv[1]
