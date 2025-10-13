@@ -3,8 +3,8 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import logging
 logging.getLogger('tensorflow_hub').setLevel(logging.ERROR)
 import warnings
-warnings.filterwarnings("ignore", category=FutureWarning, module='tensorflow_hub')
-warnings.filterwarnings("ignore", category=UserWarning, module='torchvision')
+warnings.filterwarnings("ignore", category=FutureWarning)
+warnings.filterwarnings("ignore", category=UserWarning)
 
 import sys
 import pandas as pd
@@ -27,26 +27,36 @@ def setup_logging(log_dir):
     log_filename = f"batch_predict_log_{timestamp}.log"
     log_filepath = os.path.join(log_dir, log_filename)
 
+    # Configure logger
     logger = logging.getLogger('crime_batch_predict')
     logger.setLevel(logging.INFO)
     logger.propagate = False 
 
+    # Clear existing handlers to prevent duplicate logs
     if logger.hasHandlers():
         logger.handlers.clear()
 
+    # Create handlers
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     file_handler = logging.FileHandler(log_filepath)
     file_handler.setFormatter(formatter)
     stream_handler = logging.StreamHandler()
     stream_handler.setFormatter(formatter)
 
+    # Add handlers
     logger.addHandler(file_handler)
     logger.addHandler(stream_handler)
     
     return logger, log_filepath
 
+def save_results(results_list, output_path):
+    """Saves the current list of results to a CSV file."""
+    if not results_list: return
+    df = pd.DataFrame(results_list)
+    df.to_csv(output_path, index=False)
+
 def run_batch_prediction(video_dir, output_csv_path, num_videos=None):
-    """Runs predictions on videos and saves results, showing the top prediction."""
+    """Runs predictions on videos and saves the top 3 results to a CSV."""
     logger.info(f"Starting batch prediction on directory: {video_dir}")
     
     all_video_files = [f for f in os.listdir(video_dir) if f.lower().endswith(('.mp4', '.avi', '.mov', '.mkv'))]
@@ -54,6 +64,7 @@ def run_batch_prediction(video_dir, output_csv_path, num_videos=None):
         logger.error(f"No video files found in '{video_dir}'.")
         return
 
+    # Select a random subset if num_videos is specified
     if num_videos is not None and num_videos < len(all_video_files):
         logger.info(f"Randomly selecting {num_videos} videos to process from a total of {len(all_video_files)}.")
         video_files_to_process = random.sample(all_video_files, num_videos)
@@ -63,41 +74,42 @@ def run_batch_prediction(video_dir, output_csv_path, num_videos=None):
 
     results = []
     
-    for filename in tqdm(video_files_to_process, desc="Running Predictions", ncols=100):
-        file_path = os.path.join(video_dir, filename)
-        logger.info(f"--- Processing: {filename} ---")
-        try:
-            predicted_results = get_prediction(file_path)
-            
-            if not predicted_results:
-                top_prediction = ("N/A", 0.0)
-            else:
-                top_prediction = max(predicted_results, key=lambda item: item[1])
+    try:
+        for i, filename in enumerate(tqdm(video_files_to_process, desc="Running Predictions", ncols=100)):
+            file_path = os.path.join(video_dir, filename)
+            logger.info(f"--- Processing: {filename} ---")
+            try:
+                predicted_results = get_prediction(file_path)
+                
+                top_3 = sorted(predicted_results, key=lambda item: item[1], reverse=True)[:3]
 
-            top_label_code, top_confidence = top_prediction
-            top_label_name = config.LABEL_MAP.get(top_label_code, "Unknown")
-            
-            results.append({
-                "filename": filename,
-                "top_prediction": top_label_name,
-                "confidence": f"{top_confidence:.2%}"
-            })
-            logger.info(f"Successfully processed {filename}. Top Prediction: {top_label_name}")
+                row = {"filename": filename}
+                for j, (code, prob) in enumerate(top_3):
+                    row[f"prediction_{j+1}"] = config.LABEL_MAP.get(code, "Unknown")
+                    row[f"confidence_{j+1}"] = f"{prob:.2%}"
+                
+                results.append(row)
+                logger.info(f"Successfully processed {filename}. Top Prediction: {row.get('prediction_1', 'N/A')}")
 
-        except Exception as e:
-            logger.error(f"Failed to process {filename}: {e}", exc_info=True)
+                if (i + 1) % 50 == 0:
+                    logger.info(f"\n--- Intermittently saving results at video {i+1}/{len(video_files_to_process)} ---\n")
+                    save_results(results, output_csv_path)
 
-    results_df = pd.DataFrame(results)
-    results_df.to_csv(output_csv_path, index=False)
-    logger.info(f"✅ Batch prediction complete. Results saved to: {output_csv_path}")
-    logger.info("\n--- Sample of Predictions ---\n" + results_df.head().to_string())
+            except Exception as e:
+                logger.error(f"Failed to process {filename}: {e}", exc_info=True)
+    
+    finally:
+        logger.info("\n--- Saving final results ---")
+        save_results(results, output_csv_path)
+        logger.info(f"✅ Batch prediction finished. Final results saved to: {output_csv_path}")
+        if results:
+            logger.info("\n--- Sample of Predictions ---\n" + pd.DataFrame(results).head().to_string())
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run batch prediction on a directory of videos.")
     parser.add_argument("video_directory", type=str, help="Path to the directory containing videos.")
     args = parser.parse_args()
     
-    # Set this to a number for a random subset, or None to process all files.
     NUM_VIDEOS_TO_PROCESS = None 
 
     logger, log_file = setup_logging(config.LOG_DIR)
