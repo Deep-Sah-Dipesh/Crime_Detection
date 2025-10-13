@@ -1,0 +1,22 @@
+2025-10-14 02:10:16,273 - INFO - Log file for this run: H:\Crime_Detection\crime_detection_model\logs\compare_log_20251014_021016.log
+2025-10-14 02:10:16,273 - INFO - --- Starting Detailed Analysis for: Bad.Boys.II.2003__#00-30-16_00-36-53_label_B2-B6-G.mp4 ---
+
+2025-10-14 02:10:16,273 - INFO - -> Extracting features from file (this may take a moment)...
+2025-10-14 02:12:38,083 - INFO - -> Running predictions on each data source...
+
+2025-10-14 02:12:38,255 - INFO - ======================================================================
+                 Unimodal vs. Multimodal Predictions
+======================================================================
+          Data Source                                        Top Predictions
+           Video Only      Fighting: 76.9%, Car Accident: 34.4%, Abuse: 8.9%
+           Audio Only Shooting: 96.8%, Explosion: 65.1%, Car Accident: 32.5%
+            Text Only         Fighting: 10.1%, Normal: 4.7%, Explosion: 4.7%
+Combined (Multimodal)     Shooting: 99.2%, Explosion: 71.6%, Fighting: 55.5%
+======================================================================
+
+2025-10-14 02:12:38,255 - INFO - --- Analysis Summary ---
+
+2025-10-14 02:12:38,255 - INFO - One modality (either video or audio) was dominant in the final prediction.
+2025-10-14 02:12:38,255 - INFO - The video suggested 'Fighting', the audio suggested 'Shooting', and the combined result was 'Shooting'.
+2025-10-14 02:12:38,255 - INFO - 
+
