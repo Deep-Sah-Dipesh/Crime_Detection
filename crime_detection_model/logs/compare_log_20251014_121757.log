@@ -1,0 +1,21 @@
+2025-10-14 12:17:57,620 - INFO - Log file for this run: H:\Crime_Detection\crime_detection_model\logs\compare_log_20251014_121757.log
+2025-10-14 12:17:57,620 - INFO - --- Starting Detailed Analysis for: Sin.City.2005__#0-22-04_0-22-18_label_B5-0-0.mp4 ---
+
+2025-10-14 12:17:57,620 - INFO - -> Extracting features from file (this may take a moment)...
+2025-10-14 12:18:06,738 - INFO - -> Running predictions on each data source...
+
+2025-10-14 12:18:06,838 - INFO - ======================================================================
+                 Unimodal vs. Multimodal Predictions
+======================================================================
+          Data Source                                        Top Predictions
+           Video Only  Fighting: 15.6%, Car Accident: 13.0%, Explosion: 2.5%
+           Audio Only Fighting: 54.5%, Car Accident: 37.7%, Explosion: 30.9%
+            Text Only         Fighting: 10.1%, Normal: 4.7%, Explosion: 4.7%
+Combined (Multimodal)  Fighting: 43.0%, Car Accident: 19.0%, Explosion: 4.7%
+======================================================================
+
+2025-10-14 12:18:06,838 - INFO - --- Analysis Summary ---
+
+2025-10-14 12:18:06,838 - INFO - All modalities strongly agree. The model is highly confident that the activity is 'Fighting'.
+2025-10-14 12:18:06,838 - INFO - 
+

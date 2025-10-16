@@ -121,7 +121,7 @@ if __name__ == "__main__":
     parser.add_argument("video_directory", type=str, help="Path to the directory containing videos.")
     args = parser.parse_args()
     
-    NUM_VIDEOS_TO_PROCESS = 10 
+    NUM_VIDEOS_TO_PROCESS = None 
 
     logger, log_file = setup_logging(config.LOG_DIR)
     logger.info(f"Log file for this run: {log_file}")

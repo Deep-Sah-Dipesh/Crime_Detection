@@ -1,0 +1,22 @@
+2025-10-15 14:42:51,652 - INFO - Log file for this run: H:\Crime_Detection\crime_detection_model\logs\compare_log_20251015_144251.log
+2025-10-15 14:42:51,652 - INFO - --- Starting Detailed Analysis for: Quantum.Of.Solace.2008__#01-30-26_01-30-42_label_B2-B1-0.mp4 ---
+
+2025-10-15 14:42:51,652 - INFO - -> Extracting features from file (this may take a moment)...
+2025-10-15 14:43:03,030 - INFO - -> Running predictions on each data source...
+
+2025-10-15 14:43:03,153 - INFO - ======================================================================
+                 Unimodal vs. Multimodal Predictions
+======================================================================
+          Data Source                                    Top Predictions
+           Video Only     Fighting: 5.5%, Riot: 3.8%, Car Accident: 3.7%
+           Audio Only Shooting: 78.6%, Fighting: 59.2%, Explosion: 43.7%
+            Text Only     Fighting: 10.1%, Normal: 4.7%, Explosion: 4.7%
+Combined (Multimodal) Shooting: 91.4%, Fighting: 54.4%, Explosion: 27.5%
+======================================================================
+
+2025-10-15 14:43:03,153 - INFO - --- Analysis Summary ---
+
+2025-10-15 14:43:03,153 - INFO - One modality (either video or audio) was dominant in the final prediction.
+2025-10-15 14:43:03,153 - INFO - The video suggested 'Fighting', the audio suggested 'Shooting', and the combined result was 'Shooting'.
+2025-10-15 14:43:03,153 - INFO - 
+

@@ -1,0 +1,38 @@
+2025-10-14 12:17:08,656 - INFO - Log file for this run: H:\Crime_Detection\crime_detection_model\logs\batch_predict_log_20251014_121708.log
+2025-10-14 12:17:08,657 - INFO - Starting batch prediction on directory: H:\Crime_Detection\Testing\Videos
+2025-10-14 12:17:08,659 - INFO - Randomly selecting 10 videos to process from a total of 800.
+2025-10-14 12:17:08,662 - INFO - --- Processing: Death.Proof.2007__#01-40-41_01-42-17_label_B5-B6-0.mp4 ---
+2025-10-14 12:17:08,862 - INFO - Successfully processed Death.Proof.2007__#01-40-41_01-42-17_label_B5-B6-0.mp4. Top Prediction: Car Accident
+2025-10-14 12:17:08,862 - INFO - --- Processing: Salt.2010__#01-12-05_01-12-32_label_B2-G-0.mp4 ---
+2025-10-14 12:17:08,885 - INFO - Successfully processed Salt.2010__#01-12-05_01-12-32_label_B2-G-0.mp4. Top Prediction: Explosion
+2025-10-14 12:17:08,885 - INFO - --- Processing: v=yDqThVpu1AM__#1_label_B4-0-0.mp4 ---
+2025-10-14 12:17:22,763 - INFO - Successfully processed v=yDqThVpu1AM__#1_label_B4-0-0.mp4. Top Prediction: Riot
+2025-10-14 12:17:22,763 - INFO - --- Processing: v=X6Tbn8_X-Os__#1_label_B1-0-0.mp4 ---
+2025-10-14 12:17:22,779 - INFO - Successfully processed v=X6Tbn8_X-Os__#1_label_B1-0-0.mp4. Top Prediction: Fighting
+2025-10-14 12:17:22,787 - INFO - --- Processing: v=es97CGK_5XQ__#1_label_A.mp4 ---
+2025-10-14 12:17:22,808 - INFO - Successfully processed v=es97CGK_5XQ__#1_label_A.mp4. Top Prediction: Normal
+2025-10-14 12:17:22,808 - INFO - --- Processing: Bad.Boys.1995__#01-11-55_01-12-40_label_G-B2-B6.mp4 ---
+2025-10-14 12:17:22,834 - INFO - Successfully processed Bad.Boys.1995__#01-11-55_01-12-40_label_G-B2-B6.mp4. Top Prediction: Explosion
+2025-10-14 12:17:22,834 - INFO - --- Processing: v=GrHfWKeTDEI__#1_label_A.mp4 ---
+2025-10-14 12:17:22,856 - INFO - Successfully processed v=GrHfWKeTDEI__#1_label_A.mp4. Top Prediction: Car Accident
+2025-10-14 12:17:22,856 - INFO - --- Processing: v=_Hn2Xlt-IWU__#1_label_A.mp4 ---
+2025-10-14 12:17:22,882 - INFO - Successfully processed v=_Hn2Xlt-IWU__#1_label_A.mp4. Top Prediction: Normal
+2025-10-14 12:17:22,883 - INFO - --- Processing: Fast.Furious.2009__#01-29-10_01-29-55_label_B2-0-0.mp4 ---
+2025-10-14 12:17:22,899 - INFO - Successfully processed Fast.Furious.2009__#01-29-10_01-29-55_label_B2-0-0.mp4. Top Prediction: Explosion
+2025-10-14 12:17:22,906 - INFO - --- Processing: Sin.City.2005__#0-29-34_0-29-56_label_B2-0-0.mp4 ---
+2025-10-14 12:17:22,930 - INFO - Successfully processed Sin.City.2005__#0-29-34_0-29-56_label_B2-0-0.mp4. Top Prediction: Shooting
+2025-10-14 12:17:22,930 - INFO - 
+--- Saving final results ---
+2025-10-14 12:17:23,051 - INFO - 
+--- Sample of 10 Highest Confidence Predictions ---
+                                                 filename  prediction_1 confidence_1  prediction_2 confidence_2  prediction_3 confidence_3
+2                      v=yDqThVpu1AM__#1_label_B4-0-0.mp4          Riot       96.44%      Fighting       86.36%      Shooting        1.45%
+5     Bad.Boys.1995__#01-11-55_01-12-40_label_G-B2-B6.mp4     Explosion       90.73%  Car Accident        6.20%      Fighting        5.70%
+1          Salt.2010__#01-12-05_01-12-32_label_B2-G-0.mp4     Explosion       77.95%      Fighting       45.55%      Shooting       22.03%
+3                      v=X6Tbn8_X-Os__#1_label_B1-0-0.mp4      Fighting       66.61%     Explosion       41.47%         Abuse        4.90%
+0  Death.Proof.2007__#01-40-41_01-42-17_label_B5-B6-0.mp4  Car Accident       60.51%      Fighting       44.91%     Explosion       11.35%
+8  Fast.Furious.2009__#01-29-10_01-29-55_label_B2-0-0.mp4     Explosion       56.01%      Fighting       18.12%      Shooting       13.00%
+4                           v=es97CGK_5XQ__#1_label_A.mp4        Normal       43.05%      Fighting       13.47%  Car Accident        8.07%
+9        Sin.City.2005__#0-29-34_0-29-56_label_B2-0-0.mp4      Shooting       31.61%     Explosion       11.28%      Fighting        8.93%
+7                           v=_Hn2Xlt-IWU__#1_label_A.mp4        Normal       14.77%     Explosion       14.42%      Fighting       10.70%
+6                           v=GrHfWKeTDEI__#1_label_A.mp4  Car Accident        3.39%      Shooting        1.91%        Normal        0.98%
