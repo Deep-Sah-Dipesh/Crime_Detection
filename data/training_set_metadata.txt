@@ -1,0 +1,31 @@
+
+======================================================================
+                  DATASET METADATA REPORT
+======================================================================
+
+Dataset Path: H:\Crime_Detection\Training\Videos
+
+--- Overall Statistics ---
+Total Videos Analyzed:      3950
+Total Duration:             188.87 hours
+Number of Categories:       7 (Including 'Normal')
+
+--- Averages ---
+Avg. Video Length:          172.13 seconds
+Avg. Frames per Video:      4,131
+Avg. Words per Transcript:  341.46 
+Avg. Labels per Video:      1.07
+Avg. Videos per Category:   603.86
+
+--- Extremes ---
+Min. Video Length:          1.42 seconds
+Max. Video Length:          10816.21 seconds
+
+======================================================================
+
+
+
+
+
+
+

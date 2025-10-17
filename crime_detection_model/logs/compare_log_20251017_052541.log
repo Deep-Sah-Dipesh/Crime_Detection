@@ -1,0 +1,22 @@
+2025-10-17 05:25:41,238 - INFO - Log file for this run: H:\Crime_Detection\crime_detection_model\logs\compare_log_20251017_052541.log
+2025-10-17 05:25:41,238 - INFO - --- Starting Detailed Analysis for: Black.Hawk.Down.2001__#01-13-59_01-14-49_label_B2-0-0.mp4 ---
+
+2025-10-17 05:25:41,250 - INFO - -> Extracting features from file (this may take a moment)...
+2025-10-17 05:26:04,901 - INFO - -> Running predictions on each data source...
+
+2025-10-17 05:26:05,016 - INFO - ======================================================================
+                 Unimodal vs. Multimodal Predictions
+======================================================================
+          Data Source                                        Top Predictions
+           Video Only  Fighting: 57.8%, Car Accident: 39.6%, Explosion: 0.7%
+           Audio Only Shooting: 100.0%, Explosion: 79.2%, Car Accident: 0.6%
+            Text Only         Fighting: 10.1%, Normal: 4.7%, Explosion: 4.7%
+Combined (Multimodal) Shooting: 100.0%, Explosion: 74.9%, Car Accident: 1.5%
+======================================================================
+
+2025-10-17 05:26:05,016 - INFO - --- Analysis Summary ---
+
+2025-10-17 05:26:05,018 - INFO - One modality (either video or audio) was dominant in the final prediction.
+2025-10-17 05:26:05,018 - INFO - The video suggested 'Fighting', the audio suggested 'Shooting', and the combined result was 'Shooting'.
+2025-10-17 05:26:05,018 - INFO - 
+

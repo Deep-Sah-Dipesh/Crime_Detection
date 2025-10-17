@@ -1,0 +1,33 @@
+2025-10-15 04:12:42,036 - INFO - Log file for this run: H:\Crime_Detection\crime_detection_model\logs\evaluate_log_20251015_041242.log
+2025-10-15 04:12:42,036 - INFO - Starting evaluation on directory: H:\Crime_Detection\Testing\Videos
+2025-10-15 04:12:42,036 - INFO - Using ground truth labels from: H:\Crime_Detection\data\testing_ground_truth.csv
+2025-10-15 04:12:42,099 - INFO - Processing all 800 videos found in the CSV.
+2025-10-15 04:12:57,702 - INFO - 
+--- Process finished or interrupted. Processed 800 videos. ---
+2025-10-15 04:12:57,705 - INFO - 
+======================================================================
+                      MODEL EVALUATION REPORT
+======================================================================
+2025-10-15 04:12:57,705 - INFO - 
+--- Accuracy Metrics (Calculated on ALL classes) ---
+  - Top-3 Partial Accuracy: 82.00%
+  - Strict Accuracy (Top-1 Exact Match): 54.37%
+
+2025-10-15 04:12:57,715 - INFO - --- Performance by Category ---
+
+              precision    recall  f1-score   support
+
+      Normal       0.75      0.67      0.71       300
+    Fighting       0.42      0.70      0.53       126
+    Shooting       0.74      0.31      0.44       104
+        Riot       0.82      0.47      0.59       101
+Car Accident       0.48      0.41      0.44       106
+   Explosion       0.42      0.53      0.47       103
+
+   micro avg       0.58      0.56      0.57       840
+   macro avg       0.61      0.51      0.53       840
+weighted avg       0.63      0.56      0.57       840
+ samples avg       0.58      0.56      0.57       840
+
+2025-10-15 04:12:58,033 - INFO - 
+Evaluation summary plot saved to: H:\Crime_Detection\evaluation_summary.png
